@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<html lang="fr">
+    <head>
+        <link rel="stylesheet" type="text/css" href="video-grid.css">
+    </head>
+    <body>
+        <header> Coucool header</header>
+        <main>
+          <div style="position:absolute; width:100%; height: calc(100vh - 60px); background-color:green; overflow: hidden; display:grid; place-items: center;">
+              <div id="video-grid-container" class="overflowing-height" style="position:absolute; background-color:black;">
+                <!--
+                <div class="video-container" style="width:100%; height:100%; background-color:grey; position: absolute;">
+                    <video controls style="height: 100%; width: 100%;">
+                      <source src="https://client.adequa.me/coucool/matrice_dance.mp4" type="video/mp4">
+                      <p>Votre navigateur ne supporte pas la vidéo HTML5. Voici à la place <a href="rabbit320.mp4">un lien vers la vidéo</a>.</p>
+                    </video>
+                </div>
+                -->
+                <div class="grid-container">
+                </div>
+              </div>
+              <div class="controls">
+                  <div class="playOrPause"> Play the dance </div>
+                  <div class="fwdOrRwd"> FORWARD </div>
+              </div>
+          </div>
+        </main>
+        <footer> Coucool footer</footer>
+    </body>
+
+    <script type="text/javascript" src="video-grid.js"></script>  
+
+    
+</html>
