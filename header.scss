@@ -1,0 +1,43 @@
+header {
+  width: auto;
+  height: 13vh;
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(23,22,18);
+}
+header h1 {
+  font-size: 38px;
+  font-family: 'Mantra Alt';
+  margin: 0;
+  color: rgb(229,203,170);
+  font-weight: 200;
+}
+header h1 span {
+  font-weight: 800;
+  font-family: 'Personify';
+}
+header .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header hr {
+  margin: 0;
+  margin-top: 5px;
+  border-color: rgb(229,203,170);
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu .stick {
+  width: 50px;
+  height: 5px;
+  margin-bottom: 9px;
+  background-color:  rgb(229,203,170);
+  display: inline-block;
+}

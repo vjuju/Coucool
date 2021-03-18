@@ -3,9 +3,20 @@
 <html lang="fr">
     <head>
         <link rel="stylesheet" type="text/css" href="video-grid.css">
+        <link rel="stylesheet" type="text/css" href="header.scss">
     </head>
     <body>
-        <header> Coucool header</header>
+        <header>
+          <div class="top">
+            <h1><span>COUCOOL</span> 23, 24 & 25 juillet 2021</h1>
+            <div class="menu">
+              <div class="stick stick-1"></div>
+              <div class="stick stick-2"></div>
+              <div class="stick stick-3"></div>
+            </div>
+          </div>
+          <hr>
+        </header>
         <main>
           <div style="position:absolute; width:100%; height: calc(100vh - 60px); background-color:green; overflow: hidden; display:grid; place-items: center;">
               <div id="video-grid-container" class="overflowing-height" style="position:absolute; background-color:black;">
@@ -29,7 +40,6 @@
         <footer> Coucool footer</footer>
     </body>
 
-    <script type="text/javascript" src="video-grid.js"></script>  
+    <script type="text/javascript" src="video-grid.js"></script>
 
-    
 </html>

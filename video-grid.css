@@ -7,7 +7,25 @@
     font-weight: normal;
     font-style: normal;
   }
-  
+@font-face {
+  font-family: 'Personify';
+  src: url('fonts/personify.eot');
+  src: url('fonts/personify.eot?#iefix') format('embedded-opentype'),
+        url('fonts/personify.woff') format('woff'),
+        url('fonts/personify.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mantra Alt';
+  src: url('fonts/mantra_alt.eot');
+  src: url('fonts/mantra_alt.eot?#iefix') format('embedded-opentype'),
+        url('fonts/mantra_alt.woff') format('woff'),
+        url('fonts/mantra_alt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
   :root{
     --footer-header-height:30;
     --video-initial-height:1500;
@@ -19,8 +37,8 @@
   main {width:100%; height:calc(100vh - 2 * var(--footer-header-height) * 1px); overflow: hidden;}
 
   .grid-container {
-    width:100%; 
-    height:100%; 
+    width:100%;
+    height:100%;
     position: absolute;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
