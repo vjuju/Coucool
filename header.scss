@@ -28,13 +28,13 @@ header hr {
   margin-top: 5px;
   border-color: rgb(229,203,170);
 }
-.menu {
+header .menu {
   display: flex;
   flex-direction: column;
   cursor: pointer;
 }
 
-.menu .stick {
+header .menu .stick {
   width: 50px;
   height: 5px;
   margin-bottom: 9px;
