@@ -2,22 +2,25 @@
 <meta name="viewport" content="width=device-width, user-scalable=no">
 <html lang="fr">
     <head>
+        <link rel="stylesheet" type="text/css" href="main.css">
         <link rel="stylesheet" type="text/css" href="fonts.css">
         <link rel="stylesheet" type="text/css" href="video-grid.css">
-        <link rel="stylesheet" type="text/css" href="header.css">
+        <!--<link rel="stylesheet" type="text/css" href="header.css">-->
         <link rel="stylesheet" type="text/css" href="menu.css">
         <link rel="stylesheet" type="text/css" href="overlay.css">
     </head>
     <body>
         <header>
+          <!--
           <div class="top">
             <h1><span>COUCOOL</span> 23, 24 & 25 juillet 2021</h1>
             <a class="hamburger" href="#menu"><span class="top"></span><span class="middle"></span><span class="bottom"></span></a>
           </div>
           <hr>
+          -->
         </header>
         <main>
-          <div style="position:absolute; width:100%; height: calc(100vh - 60px); background-color:green; overflow: hidden; display:grid; place-items: center;">
+          <div class="panel" id="ticket">
               <div id="video-grid-container" class="overflowing-height" style="position:absolute; background-color:black;">
                 <!--
                 <div class="video-container" style="width:100%; height:100%; background-color:grey; position: absolute;">
@@ -28,6 +31,29 @@
                 </div>
                 -->
                 <div class="grid-container">
+                    <div class="explanations black-background">
+                    </div>
+                    <div class="explanations card">
+                      <div>
+                        Pour atteindre le sésame, il faut savoir saisir l'instant
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="message" onclick="hideMessage()">
+                <div class="message-content">
+                  <div class="image-container">
+                    <img src="http://vincky.com/coucool/2021/dance_images/dance_00091.jpg">
+                  </div>
+                  <div class="text-container">
+                    <div class="text-content">
+                      <div class="title"> FELICITATIONS!</div>
+                      <hr>
+                      <div> Tu vas pouvoir accéder au sésame de Coucool</div>
+                      <div class="button"> Contribuer</div>
+                      <div> C'est la première fois que tu entens parler de Coucool ? Alors lis ceci</div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="controls">

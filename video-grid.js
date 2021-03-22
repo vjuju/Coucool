@@ -3,6 +3,9 @@ const NB_ROWS = 3;
 var NB_IMAGES = NB_ROWS * NB_COLUMNS;
 const INTERVAL_MS = 100;
 const NB_IMG = 331;
+const colorful_images_numbers = [91, 118, 214, 252, 280]
+const message_types = ['congratulations']
+var isPlaying = false;
 
 /*
 class VideoPlayer extends HTMLElement {
@@ -64,6 +67,8 @@ function displayImages() {
     console.log("pouet")
     for (i = 0; i < NB_IMAGES; i++) {
         let img = document.createElement('img');
+        img.style.gridRow = Math.floor(i / NB_COLUMNS) + 1;
+        img.style.gridColumn = i + 1 - Math.floor(i / NB_COLUMNS) * NB_COLUMNS;
         //img.src = `/dance_images/dance_${img_nb}.jpg`;
         //console.log(img);
         gridContainer.append(img);
@@ -71,13 +76,17 @@ function displayImages() {
 }
 
 function setImgSrc(time){
-    var images = document.querySelectorAll(".grid-container img")
+    var images = document.querySelectorAll(".grid-container img");
     var i = time;
-    console.log("inImageSetting");
 
     images.forEach((img) => {
-        let img_nb = `${i}`.padStart(5, '0');
-        img.src = `http://vincky.com/coucool/2021/dance_images/dance_${img_nb}.jpg`;
+        let img_nb = i > NB_IMAGES ? i - NB_IMAGES : i ;
+        let img_nb_str = `${img_nb}`.padStart(5, '0');
+        img.src = `http://vincky.com/coucool/2021/dance_images/dance_${img_nb_str}.jpg`;
+        if (colorful_images_numbers.includes(i)) {
+            img.classList.add('clickable');
+            img.addEventListener('click', showMessage);
+        }
         i++;
     })
 
@@ -93,6 +102,19 @@ function setImgSrc(time){
     }*/
 }
 
+function showMessage(message_type){
+    if(isPlaying) {
+        const message = document.querySelector('.message');
+        message.style.visibility = 'visible';
+    }
+}
+
+function hideMessage(){
+    console.log('should be hidden')
+    const message = document.querySelector('.message');
+    message.style.visibility = 'hidden';
+}
+
 /*
 
 
@@ -105,6 +127,7 @@ function launchControls() {
     const controls = document.querySelector('.controls');
     const playOrPause = document.querySelector('.playOrPause');
     const fwdOrRwd = document.querySelector('.fwdOrRwd');
+    const explanations = document.querySelectorAll('.explanations');
     const playText = "Play the dance";
     const pauseText = "Pause the dance";
     const fwdText = "FORWARD";
@@ -123,20 +146,26 @@ function launchControls() {
 
 
     function playPauseMedia() {
-        if(interval) {
+        let clickables = document.querySelectorAll('.clickable');
+        if(isPlaying) {
             playOrPause.textContent= playText;
+            clickables.forEach((clickable) => clickable.removeEventListener('click', showMessage));
+            explanations.forEach((explanation) => explanation.style.visibility = 'visible');
             clearInterval(interval);
             interval = null;
+            isPlaying = false;
             //magicImage.style.visibility = 'hidden';
         } else {
+            explanations.forEach((explanation) => explanation.style.visibility = 'hidden');
+            clickables.forEach((clickable) => clickable.addEventListener('click', showMessage));
             playOrPause.textContent=pauseText;
             //magicImage.style.visibility = 'visible';
             interval = setInterval(playNext, 200);
+            isPlaying = true;
         }
     }
 
     function toggleFwdOrRwd() {
-        console.log(fwdOrRwd.textContent);
         if (fwdOrRwd.textContent == rwdText) {
             fwdOrRwd.textContent = fwdText;
         } else {
@@ -164,7 +193,6 @@ function launchControls() {
             }
             */
         }
-        console.log(time);
         setImgSrc(time);
         //setMagicImage();
     }

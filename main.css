@@ -1,0 +1,13 @@
+  :root{
+    --footer-header-height:30;
+    --video-initial-height:1500;
+    --video-initial-width:2900;
+    --video-ratio:calc(var(--video-initial-width) / var(--video-initial-height) );
+    --main-color:rgb(243, 211, 171);
+  }
+
+  body {margin:0; min-width: 100vw; min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; font-family: 'Mantra Alt';}
+  footer, header {width:100%; height: calc(var(--footer-header-height) * 1px); background-color: black; color:white}
+  main {width:100%; overflow: hidden;}
+
+
