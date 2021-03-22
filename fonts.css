@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'HeydingsControlsRegular';
+    src: url('fonts/heydings_controls-webfont.eot');
+    src: url('fonts/heydings_controls-webfont.eot?#iefix') format('embedded-opentype'),
+          url('fonts/heydings_controls-webfont.woff') format('woff'),
+          url('fonts/heydings_controls-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+@font-face {
+  font-family: 'Personify';
+  src: url('fonts/personify.eot');
+  src: url('fonts/personify.eot?#iefix') format('embedded-opentype'),
+        url('fonts/personify.woff') format('woff'),
+        url('fonts/personify.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mantra Alt';
+  src: url('fonts/mantra_alt.eot');
+  src: url('fonts/mantra_alt.eot?#iefix') format('embedded-opentype'),
+        url('fonts/mantra_alt.woff') format('woff'),
+        url('fonts/mantra_alt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Circular';
+  src: url('fonts/CircularStd-Book.eot');
+  src: url('fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'),
+        url('fonts/CircularStd-Book.woff') format('woff'),
+        url('fonts/CircularStd-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Trash';
+  src: url('fonts/trash.eot');
+  src: url('fonts/trash.eot?#iefix') format('embedded-opentype'),
+        url('fonts/trash.woff') format('woff'),
+        url('fonts/trash.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Harbour';
+  src: url('fonts/harbour.eot');
+  src: url('fonts/harbour.eot?#iefix') format('embedded-opentype'),
+        url('fonts/harbour.woff') format('woff'),
+        url('fonts/harbour.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Saonara';
+  src: url('fonts/saonara.eot');
+  src: url('fonts/saonara.eot?#iefix') format('embedded-opentype'),
+        url('fonts/saonara.woff') format('woff'),
+        url('fonts/saonara.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

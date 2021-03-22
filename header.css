@@ -1,0 +1,68 @@
+header {
+  width: auto;
+  height: 9vh;
+  padding: 0 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(23,22,18);
+}
+header h1 {
+  font-size: 48px;
+  font-family: 'Mantra Alt';
+  margin: 0;
+  color: rgb(229,203,170);
+  font-weight: 200;
+}
+header h1 span {
+  font-weight: 800;
+  font-family: 'Personify';
+  font-size: 60px;
+}
+header .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header hr {
+  margin: 0;
+  margin-top: 10px;
+  border-color: rgb(229,203,170);
+}
+header .hamburger {
+  position: relative;
+  display: block;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity 0.25s ease;
+}
+
+header .hamburger.active .top {
+  transform: translateY(11px) translateX(0) rotate(45deg);
+  background: #FFD6AC;
+}
+header .hamburger.active .middle {
+  opacity: 0;
+  background: #FFD6AC;
+}
+header .hamburger.active .bottom {
+  transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: #FFD6AC;
+}
+header .hamburger span {
+  background: #FFD6AC;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.35s ease;
+}
+header .hamburger span:nth-of-type(2) {
+  top: 11px;
+}
+header .hamburger span:nth-of-type(3) {
+  top: 22px;
+}
