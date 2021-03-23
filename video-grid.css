@@ -1,11 +1,11 @@
 
 #ticket {
-  position:absolute; 
-  width:100%; 
-  height: calc(100vh - 60px); 
-  background-color:green; 
-  overflow: hidden; 
-  display:grid; 
+  position:absolute;
+  width:100%;
+  height: calc(100vh - 60px);
+  background-color:green;
+  overflow: hidden;
+  display:grid;
   place-items: center;
 }
 
@@ -23,7 +23,7 @@
   }
 
   .explanations {
-    z-index: 50;
+    z-index: 20;
   }
 
   .clickable {
