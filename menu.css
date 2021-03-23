@@ -4,10 +4,10 @@
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  color: white;
   height: 100%;
   width: 100%;
   font-family: "Circular";
+  color: #FFD6AC;
 }
 .menu-left {
   grid-area: 1 / 1 / 2 / 2;
@@ -16,8 +16,8 @@
   align-items: flex-end;
   height: 90%;
   margin: auto 0;
-  justify-content: center;
-  border-right: 1px solid white;
+  justify-content: space-around;
+  border-right: 1px solid #FFD6AC;
   padding-right: 5rem;
 }
 .menu-right {
@@ -31,19 +31,19 @@
 
 
 .menu-left h3 {
-  font-size: 26px;
+  font-size: 36px;
   text-align: right;
   font-weight: normal;
   margin-bottom: 30px;
 }
 
 .menu-left h3 strong {
-  font-size: 40px;
+  font-size: 60px;
 }
 
 .menu-left .menu-contact #mail {
   font-weight: 800;
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid #FFD6AC;
   padding-bottom: 2px;
 }
 
@@ -54,7 +54,16 @@
   justify-content: space-between;
 }
 .menu-left .menu-contact a{
-  font-size: 30px;
+  font-size: 36px;
+  color: #FFD6AC;
+}
+.menu-left .languages a {
+  font-size: 25px;
+  color: #FFD6AC;
+}
+.menu-left .languages a:first-child{
+  font-weight: 800;
+  text-decoration: underline;
 }
 .menu-left .menu-contact i{
   font-size: 35px;
@@ -63,6 +72,7 @@
 .menu-right a {
   font-size: 150px;
   margin-bottom: 10px;
+  color: #FFD6AC;
 }
 
 .menu-right #about {
@@ -81,4 +91,55 @@
 
 .menu-right #archives {
   font-family: 'Mantra Alt';
+}
+@media screen and (max-width: 640px) {
+  .menu-window {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column-reverse;
+    height: 90%;
+    margin: auto 0;
+  }
+  .menu-left h3 {
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+  }
+  .menu-left h3 br {
+    display: none;
+  }
+  .menu-left h3 strong {
+    font-size: 50px;
+  }
+  .menu-left .menu-contact {
+    width: 60%;
+  }
+  .menu-left, .menu-right {
+    display: block;
+    width: 80%;
+  }
+  .menu-right {
+    padding-left: 0;
+    height: auto;
+  }
+  .menu-left {
+    padding-right: 0;
+    border-right: none;
+    height: auto;
+    margin: 0;
+  }
+  .menu-left .languages {
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+  }
+
+  .menu-right a {
+    font-size: 80px;
+    width: 100%;
+  }
 }

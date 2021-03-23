@@ -1,13 +1,13 @@
 header {
   width: auto;
-  height: 9vh;
+  height: 120px;
   padding: 0 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: rgb(23,22,18);
 }
-header h1 {
+header h1, h2 {
   font-size: 48px;
   font-family: 'Mantra Alt';
   margin: 0;
@@ -19,15 +19,14 @@ header h1 span {
   font-family: 'Personify';
   font-size: 60px;
 }
-header .top {
+header .header-desktop {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid rgb(229,203,170);
 }
-header hr {
-  margin: 0;
-  margin-top: 10px;
-  border-color: rgb(229,203,170);
+header .header-mobile {
+  display: none;
 }
 header .hamburger {
   position: relative;
@@ -65,4 +64,32 @@ header .hamburger span:nth-of-type(2) {
 }
 header .hamburger span:nth-of-type(3) {
   top: 22px;
+}
+
+@media screen and (max-width: 640px) {
+  header {
+    height: 200px;
+    padding: 0 2rem;
+  }
+  header .header-desktop {
+    display: none;
+  }
+  header .header-mobile {
+    display: block;
+  }
+  header .header-mobile .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(229,203,170);
+  }
+  .header-mobile h1 {
+    font-weight: 800;
+    font-family: 'Personify';
+    font-size: 60px;
+  }
+  .header-mobile h2 {
+    padding-top: 10px;
+    font-size: 39px;
+  }
 }
