@@ -184,11 +184,11 @@ section::-webkit-scrollbar {
   width: 70%;
 }
 .menu-right .nostalgy .site .year {
-  font-size: 65px;
+  font-size: 52px;
   font-weight: bold;
 }
 .menu-right .nostalgy .site a {
-  font-size: 35px;
+  font-size: 30px;
   color: #FFD6AC;
   text-decoration: underline;
 }
