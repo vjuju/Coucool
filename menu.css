@@ -207,7 +207,7 @@ section::-webkit-scrollbar {
     justify-content: flex-end;
     align-items: center;
     flex-direction: column-reverse;
-    height: calc(100% - 80px);
+    height: calc(100% - 90px);
   }
   .menu-left h3 {
     text-align: left;
@@ -259,7 +259,7 @@ section::-webkit-scrollbar {
   .menu-left .languages {
     position: absolute;
     bottom: 32px;
-    right: 32px;
+    right: 40px;
   }
 
   .menu-right a.title {
