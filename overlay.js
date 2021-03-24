@@ -24,6 +24,15 @@ titles.forEach((title, index) => {
     translateContent(title.parentNode.querySelector('section'));
     translateTitles(index, Array.from(titles).filter(t => t !== title), title)
   });
+  let interval = null
+  let initial_font = getComputedStyle(title).getPropertyValue("font-family");
+  title.addEventListener('mouseover', e => {
+    stereoscopic(title, initial_font)
+    interval = setInterval( e => stereoscopic(title, initial_font), 800)
+  });
+  title.addEventListener('mouseout', e => {
+    clearInterval(interval)
+  });
 });
 
 
@@ -33,6 +42,14 @@ backButton.addEventListener('click', e => {
     resetPositions(title);
   });
 });
+
+const stereoscopic = (element, initial_font) => {
+  let fonts = ['Trash', 'Mantra Alt', 'Harbour', 'Saonara', 'Circular'].filter(f => f !== initial_font)
+  fonts.push(initial_font)
+  fonts.forEach((font, index) => {
+    setTimeout(e => element.style.fontFamily = font, index * 200);
+  });
+};
 
 const fadeOverlay = (menu, panel) => {
   if (menu.classList.contains('open')) {
@@ -51,7 +68,7 @@ const toggleAccordion = (active, element) => {
 }
 
 const initiateView = (title, button) => {
-  title.style.pointerEvents = "none";
+
   button.style.opacity = 1;
 };
 
@@ -74,7 +91,7 @@ const translateContent = (content, title) => {
 
 const resetPositions = (title) => {
   title.parentNode.classList.remove('no-height');
-  title.style.pointerEvents = "auto";
+
   title.parentNode.querySelector('section').style.height = 0;
   title.parentNode.querySelector('section').style.opacity = 0;
   if (window.innerWidth <= 780) {

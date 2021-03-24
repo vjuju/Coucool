@@ -201,6 +201,7 @@ section::-webkit-scrollbar {
   width: 20%;
 }
 
+
 @media screen and (max-width: 780px) {
   .menu-window {
     display: flex;
