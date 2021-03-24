@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="header.css">
         <link rel="stylesheet" type="text/css" href="menu.css">
         <link rel="stylesheet" type="text/css" href="overlay.css">
+
     </head>
     <body>
         <header>
@@ -17,7 +18,7 @@
             <a class="hamburger" href="#menu"><span class="top"></span><span class="middle"></span><span class="bottom"></span></a>
           </div>
           <div class="header-mobile">
-            <div class="top">
+            <div class="top-part">
               <h1>COUCOOL</h1>
               <a class="hamburger" href="#menu"><span class="top"></span><span class="middle"></span><span class="bottom"></span></a>
             </div>
@@ -53,7 +54,7 @@
                   </div>
                   <div class="text-container">
                     <div class="text-content">
-                      <div class="title"> FELICITATIONS!</div>
+                      <div class="congrats-title"> FELICITATIONS!</div>
                       <hr>
                       <div> Tu vas pouvoir accéder au sésame de Coucool</div>
                       <div class="button"> Contribuer</div>
@@ -73,27 +74,42 @@
             Menu Overlay
           -->
            <div class="overlay" id="menu">
+            <span id="back-button"><i class="fas fa-chevron-left"></i> Retour</span>
             <nav class="menu-window">
               <div class="menu-left">
                 <span></span>
-                <h3><strong>Coucool</strong> <br>est un rassemblement <br>artistique mis en fête <br>par Eros Sélavy.</h3>
-                <br>
                 <div class="menu-contact">
-                  <a id="mail" href="mailto:eros@cou.cool">Lui écrire</a>
-                  <a href="https://www.instagram.com/coucool_eros_selavy">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                  <a href="https://www.facebook.com/coucoolcoucool/">
-                    <i class="fab fa-facebook-square"></i>
-                  </a>
+                  <h3><strong>Coucool</strong> <br>est un rassemblement <br>artistique mis en fête <br>par Eros Sélavy.</h3>
+                  <br>
+                  <div class="links">
+                    <a id="mail" href="mailto:eros@cou.cool">Lui Ecrire</a>
+                    <a href="https://www.instagram.com/coucool_eros_selavy">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/coucoolcoucool/">
+                      <i class="fab fa-facebook-square"></i>
+                    </a>
+                  </div>
                 </div>
                 <span class="languages"><a href="#fr">Fr</a> - <a href="#en">En</a></span>
               </div>
               <div class="menu-right">
-                <a href="#about" id="about">À propos</a>
-                <a href="#about" id="infos">Informations</a>
-                <a href="#about" id="faq">F.A.Q</a>
-                <a href="#about" id="archives">Archives</a>
+                <div class="about subpart">
+                  <a href="#about" class="title">A propos</a>
+                  <p id="about">About content</p>
+                </div>
+                <div class="infos subpart">
+                  <a href="#infos" class="title">Informations</a>
+                  <p id="infos">Infos content</p>
+                </div>
+                <div class="faq subpart">
+                  <a href="#faq" class="title">FAQ</a>
+                  <p id="faq">FAQ content</p>
+                </div>
+                <div class="archives subpart">
+                  <a href="#archives" class="title">Archives</a>
+                  <p id="archives">Archives content</p>
+                </div>
               </div>
             </nav>
           </div>

@@ -4,7 +4,7 @@
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  height: 100%;
+  height: calc(100% - 120px);
   width: 100%;
   font-family: "Circular";
   color: #FFD6AC;
@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  height: 90%;
+  height: 100%;
   margin: auto 0;
   justify-content: space-around;
   border-right: 1px solid #FFD6AC;
@@ -37,25 +37,23 @@
   margin-bottom: 30px;
 }
 
+
 .menu-left h3 strong {
   font-size: 60px;
 }
 
 .menu-left .menu-contact #mail {
   font-weight: 800;
-  border-bottom: 2px solid #FFD6AC;
-  padding-bottom: 2px;
+  text-decoration: underline;
+  margin-right: 15px;
 }
 
-.menu-left .menu-contact {
-  display: flex;
-  align-items: center;
-  width: 40%;
-  justify-content: space-between;
-}
 .menu-left .menu-contact a{
   font-size: 36px;
   color: #FFD6AC;
+}
+.menu-left .menu-contact .links {
+  text-align: right;
 }
 .menu-left .languages a {
   font-size: 25px;
@@ -67,39 +65,53 @@
 }
 .menu-left .menu-contact i{
   font-size: 35px;
+  margin-right: 15px;
 }
 
 .menu-right a {
-  font-size: 150px;
+  font-size: 130px;
+  display: block;
   margin-bottom: 10px;
+  margin-top: 0;
   color: #FFD6AC;
 }
 
-.menu-right #about {
+.menu-right .about a {
   font-family: 'Trash';
 }
 
 
-.menu-right #infos {
+.menu-right .infos a {
   font-family: 'Saonara';
 }
 
 
-.menu-right #faq {
+.menu-right .faq a{
   font-family: 'Harbour';
 }
 
-.menu-right #archives {
+.menu-right .archives a{
   font-family: 'Mantra Alt';
 }
-@media screen and (max-width: 640px) {
+.menu-right .subpart {
+  transition: 0.5s;
+}
+.menu-right .subpart a {
+  transition: 0.5s;
+}
+.menu-right .subpart p {
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  transition: 0.5s;
+}
+@media screen and (max-width: 780px) {
   .menu-window {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
     flex-direction: column-reverse;
-    height: 90%;
-    margin: auto 0;
+    height: calc(100% - 150px);
   }
   .menu-left h3 {
     text-align: left;
@@ -113,18 +125,22 @@
     display: none;
   }
   .menu-left h3 strong {
-    font-size: 50px;
+    font-size: 40px;
   }
-  .menu-left .menu-contact {
-    width: 60%;
+  .menu-left .menu-contact a{
+    font-size: 31px;
   }
   .menu-left, .menu-right {
     display: block;
     width: 80%;
   }
+  .menu-left .menu-contact .links {
+    text-align: left;
+  }
   .menu-right {
     padding-left: 0;
     height: auto;
+    margin-bottom: 4rem;
   }
   .menu-left {
     padding-right: 0;
@@ -139,7 +155,7 @@
   }
 
   .menu-right a {
-    font-size: 80px;
+    font-size: 70px;
     width: 100%;
   }
 }
