@@ -57,6 +57,7 @@ const initiateView = (title, button) => {
 
 const translateTitles = (position, titles, clicked_title) => {
   if (window.innerWidth <= 780) {
+    document.querySelector('.menu-right').style.marginBottom = 0;
     document.querySelector('.languages').classList.add('hidden');
     document.querySelector('.menu-left').classList.add('visible');
   }
@@ -72,11 +73,12 @@ const translateContent = (content, title) => {
 };
 
 const resetPositions = (title) => {
-  title.style.pointerEvents = "auto";
   title.parentNode.classList.remove('no-height');
+  title.style.pointerEvents = "auto";
   title.parentNode.querySelector('section').style.height = 0;
   title.parentNode.querySelector('section').style.opacity = 0;
   if (window.innerWidth <= 780) {
+    document.querySelector('.menu-right').style.marginBottom = '5rem';
     document.querySelector('.menu-left').classList.remove('visible');
     document.querySelector('.languages').classList.remove('hidden');
   }

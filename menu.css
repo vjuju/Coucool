@@ -108,7 +108,7 @@
   height: 0;
   margin: 0;
   transition: 1s;
-  font-size: 23px;
+  font-size: 25px;
   overflow: scroll;
   padding-right: 10px;
 }
@@ -129,7 +129,7 @@ section::-webkit-scrollbar {
   content: '+';
   margin-right: 0.9em;
 }
-.menu-right .subpart section ul {
+.menu-right .subpart section .accordion-item ul {
   margin-top: 0;
   opacity: 0;
   max-height: 0;
@@ -160,6 +160,45 @@ section::-webkit-scrollbar {
 .menu-right .subpart section .accordion-item.active li:before {
   content: "\21C0";
   margin-right: 12px;
+}
+.menu-right .curious .foundations {
+  list-style-type: none;
+}
+.menu-right .curious .definitions ul{
+  list-style-type: disc;
+}
+
+.menu-right .curious .foundations > li:before {
+  content: "–";
+  margin-right: 1.1em;
+}
+.menu-right .nostalgy h3 {
+  content: "–";
+  margin-right: 1.1em;
+}
+.menu-right .nostalgy .site {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  align-items: center;
+  width: 70%;
+}
+.menu-right .nostalgy .site .year {
+  font-size: 65px;
+  font-weight: bold;
+}
+.menu-right .nostalgy .site a {
+  font-size: 35px;
+  color: #FFD6AC;
+  text-decoration: underline;
+}
+.menu-right .nostalgy i {
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.menu-right .nostalgy .year {
+  width: 20%;
 }
 
 @media screen and (max-width: 780px) {
@@ -229,5 +268,14 @@ section::-webkit-scrollbar {
     font-size: 23px;
     overflow: scroll;
     padding-right: 10px;
+  }
+  .menu-right .nostalgy .site {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .menu-right .nostalgy .year {
+    width: auto;
   }
 }
