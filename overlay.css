@@ -19,7 +19,8 @@ a:focus {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.35s, visibility 0.35s, height 0.35s;
-  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
 }
 .overlay.open {
   opacity: 1;
@@ -27,6 +28,18 @@ a:focus {
   height: 100%;
 }
 
+.overlay #back-button {
+  top: 40px;
+  font-family: "Circular";
+  position: absolute;
+  left: 20%;
+  color: #FFD6AC;
+  cursor: pointer;
+  font-size: 36px;
+  opacity: 0;
+  transition: 0.2s;
+  font-weight: bold;
+}
 
 @keyframes fadeInRight {
   0% {
@@ -36,5 +49,13 @@ a:focus {
   100% {
     opacity: 1;
     left: 0;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .overlay #back-button {
+    top: 30px;
+    left: 26px;
+    font-size: 32px;
   }
 }
