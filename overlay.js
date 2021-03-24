@@ -78,7 +78,7 @@ const resetPositions = (title) => {
   title.parentNode.querySelector('section').style.height = 0;
   title.parentNode.querySelector('section').style.opacity = 0;
   if (window.innerWidth <= 780) {
-    document.querySelector('.menu-right').style.marginBottom = '5rem';
+    document.querySelector('.menu-right').style.marginBottom = '4rem';
     document.querySelector('.menu-left').classList.remove('visible');
     document.querySelector('.languages').classList.remove('hidden');
   }

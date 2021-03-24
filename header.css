@@ -86,10 +86,10 @@ header .hamburger span:nth-of-type(3) {
   .header-mobile h1 {
     font-weight: 800;
     font-family: 'Personify';
-    font-size: 60px;
+    font-size: 45px;
   }
   .header-mobile h2 {
     padding-top: 10px;
-    font-size: 39px;
+    font-size: 28px;
   }
 }

@@ -54,8 +54,8 @@ a:focus {
 
 @media screen and (max-width: 780px) {
   .overlay #back-button {
-    top: 30px;
+    top: 43px;
     left: 26px;
-    font-size: 32px;
+    font-size: 23px;
   }
 }

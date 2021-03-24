@@ -215,16 +215,19 @@ section::-webkit-scrollbar {
     margin-top: 0;
     display: flex;
     flex-direction: column;
-    font-size: 28px;
+    font-size: 20px;
   }
   .menu-left h3 br {
     display: none;
   }
   .menu-left h3 strong {
-    font-size: 40px;
+    font-size: 33px;
   }
   .menu-left .menu-contact a{
-    font-size: 31px;
+    font-size: 20px;
+  }
+  .menu-left .menu-contact i {
+    font-size: 25px;
   }
   .menu-left, .menu-right {
     display: block;
@@ -233,12 +236,15 @@ section::-webkit-scrollbar {
   .menu-left .menu-contact .links {
     text-align: left;
   }
+  .menu-left .languages a {
+    font-size: 15px;
+  }
   .menu-right {
     padding-left: 0;
     min-height: auto;
     max-height: auto;
     margin: 0;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
   .menu-left {
     padding-right: 0;
@@ -257,7 +263,7 @@ section::-webkit-scrollbar {
   }
 
   .menu-right a.title {
-    font-size: 60px;
+    font-size: 49px;
     width: 100%;
   }
   .menu-right .subpart section {
@@ -265,7 +271,7 @@ section::-webkit-scrollbar {
     height: 0;
     margin: 0;
     transition: 1s;
-    font-size: 23px;
+    font-size: 16px;
     overflow: scroll;
     padding-right: 10px;
   }
