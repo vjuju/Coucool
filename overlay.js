@@ -1,6 +1,7 @@
 const hamburger = document.querySelectorAll('.hamburger')
 const titles = document.querySelectorAll('.title')
 const backButton = document.getElementById('back-button');
+const accordions = document.querySelectorAll('.accordion-item h4');
 
 hamburger.forEach(button => {
   button.addEventListener('click', e => {
@@ -10,12 +11,22 @@ hamburger.forEach(button => {
   });
 });
 
+accordions.forEach(accordion => {
+  accordion.addEventListener('click', e => {
+    let activeAccordion = Array.from(document.querySelectorAll('.accordion-item h4')).find(accordion => accordion.parentNode.classList.contains('active'))
+    if (activeAccordion) {
+      activeAccordion.parentNode.classList.remove('active');
+    }
+    accordion.parentNode.classList.add('active');
+  });
+});
 
 titles.forEach((title, index) => {
   title.addEventListener('click', e => {
     initiateView(title, document.querySelector('#back-button'));
     translateTitles(index, titles, title)
-    translateContent(title.parentNode.querySelector('p'), title);
+    translateContent(title.parentNode.querySelector('section'));
+
   });
 });
 
@@ -32,6 +43,16 @@ const initiateView = (title, button) => {
   button.style.opacity = 1;
 };
 const translateTitles = (position, titles, clicked_title) => {
+  titles.forEach(title => {
+    if (title !== clicked_title) {
+      title.classList.add('no-height');
+      title.parentNode.classList.add('no-height');
+    }
+  });
+  if (window.innerWidth <= 780) {
+    document.querySelector('.languages').classList.add('hidden');
+    document.querySelector('.menu-left').classList.add('visible');
+  }
   if (position === 0) {
     titles[1].style.transform = "translateY(80vh)"
     titles[2].style.transform = "translateY(90vh)"
@@ -49,19 +70,24 @@ const translateTitles = (position, titles, clicked_title) => {
     titles[1].style.transform = "translateY(-90vh)"
     titles[2].style.transform = "translateY(-100vh)"
   }
-  clicked_title.style.transform = `translateY(calc(-${clicked_title.parentNode.offsetTop}px + 120px))`
 };
 
 const translateContent = (content, title) => {
-  content.style.transform = `translateY(calc(-${title.parentNode.offsetTop}px + 150px))`
   content.style.opacity = 1;
-  content.style.height = 'auto';
+  content.style.height = '70vh';
 };
 
 const resetPositions = (title) => {
+  title.parentNode.querySelector('section').style.height = 0;
   title.style.pointerEvents = "auto";
-  title.parentNode.querySelector('p').style.opacity = 0;
-  title.parentNode.querySelector('p').style.height = 0;
-  title.parentNode.querySelector('p').style.transform = 'translateY(0)';
-  title.style.transform = "translateY(0)";
+  title.parentNode.querySelector('section').style.opacity = 0;
+
+
+  if (window.innerWidth <= 780) {
+    document.querySelector('.menu-left').classList.remove('visible');
+    document.querySelector('.languages').classList.remove('hidden');
+  }
+    title.style.transform = "translateY(0)";
+    title.classList.remove('no-height');
+    title.parentNode.classList.remove('no-height');
 }
