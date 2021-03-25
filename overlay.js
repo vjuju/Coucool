@@ -25,13 +25,17 @@ accordions.forEach(accordion => {
 });
 
 titles.forEach((title, index) => {
+  let initial_font = getComputedStyle(title).getPropertyValue("font-family");
   title.addEventListener('click', e => {
-    clearInterval(interval);
+    if (window.innerWidth <= 780) {
+      stereoscopic(title, initial_font)
+    } else {
+      clearInterval(interval);
+    }
     initiateView(title, document.querySelector('#back-button'));
     translateContent(title.parentNode.querySelector('section'));
     translateTitles(index, Array.from(titles).filter(t => t !== title), title)
   });
-  let initial_font = getComputedStyle(title).getPropertyValue("font-family");
   title.addEventListener('mouseover', e => {
     stereoscopic(title, initial_font)
     interval = setInterval( e => stereoscopic(title, initial_font), 800)
