@@ -6,6 +6,11 @@ let interval = null;
 
 hamburger.forEach(button => {
   button.addEventListener('click', e => {
+    if (menu.classList.contains('open')) {
+     document.querySelector('#ticket').classList.toggle('no-height')
+  } else {
+    setTimeout(e => document.querySelector('#ticket').classList.toggle('no-height'), 500);
+  }
     document.querySelector('#menu').classList.toggle('open');
     hamburger[0].classList.toggle('active');
     hamburger[1].classList.toggle('active');
