@@ -77,15 +77,15 @@ const initiateView = (title, button) => {
 };
 
 const translateTitles = (position, titles, clicked_title) => {
+  titles.forEach((title, index) => {
+    title.style.transform = `translateY(${index < position ? '-' : ''}100vh)`;
+    title.parentNode.classList.add('no-height');
+  });
   if (window.innerWidth <= 780) {
     document.querySelector('.menu-right').style.marginBottom = 0;
     document.querySelector('.languages').classList.add('hidden');
     document.querySelector('.menu-left').classList.add('visible');
   }
-   titles.forEach((title, index) => {
-    title.style.transform = `translateY(${index < position ? '-' : ''}100vh)`;
-    title.parentNode.classList.add('no-height');
-  });
 };
 
 const translateContent = (content, title) => {
