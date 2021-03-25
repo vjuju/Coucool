@@ -2,10 +2,11 @@ const hamburger = document.querySelectorAll('.hamburger')
 const titles = document.querySelectorAll('.title')
 const backButton = document.getElementById('back-button');
 const accordions = document.querySelectorAll('.accordion-item h4');
+let interval = null;
 
 hamburger.forEach(button => {
   button.addEventListener('click', e => {
-    fadeOverlay(document.querySelector('#menu'), document.querySelector('#ticket'));
+    document.querySelector('#menu').classList.toggle('open');
     hamburger[0].classList.toggle('active');
     hamburger[1].classList.toggle('active');
   });
@@ -20,11 +21,11 @@ accordions.forEach(accordion => {
 
 titles.forEach((title, index) => {
   title.addEventListener('click', e => {
+    clearInterval(interval);
     initiateView(title, document.querySelector('#back-button'));
     translateContent(title.parentNode.querySelector('section'));
     translateTitles(index, Array.from(titles).filter(t => t !== title), title)
   });
-  let interval = null
   let initial_font = getComputedStyle(title).getPropertyValue("font-family");
   title.addEventListener('mouseover', e => {
     stereoscopic(title, initial_font)
@@ -43,6 +44,7 @@ backButton.addEventListener('click', e => {
   });
 });
 
+
 const stereoscopic = (element, initial_font) => {
   let fonts = ['Trash', 'Mantra Alt', 'Harbour', 'Saonara', 'Circular'].filter(f => f !== initial_font)
   fonts.push(initial_font)
@@ -51,20 +53,13 @@ const stereoscopic = (element, initial_font) => {
   });
 };
 
-const fadeOverlay = (menu, panel) => {
-  if (menu.classList.contains('open')) {
-    panel.classList.toggle('no-height')
-  } else {
-    setTimeout(e => panel.classList.toggle('no-height'), 500);
-  }
-  menu.classList.toggle('open');
-}
-
 const toggleAccordion = (active, element) => {
   if (active) {
     active.parentNode.classList.remove('active');
   }
-  element.parentNode.classList.add('active');
+  if (active !== element) {
+    element.parentNode.classList.add('active');
+  }
 }
 
 const initiateView = (title, button) => {
@@ -95,7 +90,7 @@ const resetPositions = (title) => {
   title.parentNode.querySelector('section').style.height = 0;
   title.parentNode.querySelector('section').style.opacity = 0;
   if (window.innerWidth <= 780) {
-    document.querySelector('.menu-right').style.marginBottom = '4rem';
+    document.querySelector('.menu-right').style.marginBottom = `${window.innerWidth >= 360 ? '3' : '1'}rem`;
     document.querySelector('.menu-left').classList.remove('visible');
     document.querySelector('.languages').classList.remove('hidden');
   }

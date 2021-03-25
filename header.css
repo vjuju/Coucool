@@ -7,29 +7,36 @@ header {
   justify-content: center;
   background: rgb(23,22,18);
 }
-header h1, h2 {
-  font-size: 48px;
+header h1, .header-desktop .dates, .header-mobile h2 {
+  font-size: 20px;
   font-family: 'Mantra Alt';
   margin: 0;
   color: rgb(229,203,170);
   font-weight: 200;
+  line-height: 30px;
 }
-header h1 span {
+.header-desktop .dates {
+  display: flex;
+  align-items: baseline;
+  font-size: 33px;
+}
+.coucool {
   font-weight: 800;
   font-family: 'Personify';
-  font-size: 60px;
+  font-size: 40px;
 }
-header .header-desktop {
+.header-desktop {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   border-bottom: 1px solid rgb(229,203,170);
 }
-header .header-mobile {
+.header-mobile {
   display: none;
 }
-header .hamburger {
+.hamburger {
   position: relative;
+  margin-left: 10px;
   display: block;
   height: 27px;
   width: 35px;
@@ -38,19 +45,19 @@ header .hamburger {
   transition: opacity 0.25s ease;
 }
 
-header .hamburger.active .top {
+.hamburger.active .top {
   transform: translateY(11px) translateX(0) rotate(45deg);
   background: #FFD6AC;
 }
-header .hamburger.active .middle {
+.hamburger.active .middle {
   opacity: 0;
   background: #FFD6AC;
 }
-header .hamburger.active .bottom {
+.hamburger.active .bottom {
   transform: translateY(-11px) translateX(0) rotate(-45deg);
   background: #FFD6AC;
 }
-header .hamburger span {
+.hamburger span {
   background: #FFD6AC;
   height: 4px;
   width: 100%;
@@ -59,25 +66,37 @@ header .hamburger span {
   left: 0;
   transition: all 0.35s ease;
 }
-header .hamburger span:nth-of-type(2) {
+.hamburger span:nth-of-type(2) {
   top: 11px;
 }
-header .hamburger span:nth-of-type(3) {
+.hamburger span:nth-of-type(3) {
   top: 22px;
 }
 
-@media screen and (max-width: 1070px) {
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+  header {
+    padding: 0 1rem;
+  }
+  .header-desktop h1, .header-desktop .dates, .header-mobile h2 {
+    font-size: 15px;
+  }
+  .header-desktop .dates {
+    font-size: 21px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
   header {
     height: 150px;
     padding: 0 2rem;
   }
-  header .header-desktop {
+  .header-desktop {
     display: none;
   }
-  header .header-mobile {
+  .header-mobile {
     display: block;
   }
-  header .header-mobile .top-part {
+  .header-mobile .top-part {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -87,9 +106,19 @@ header .hamburger span:nth-of-type(3) {
     font-weight: 800;
     font-family: 'Personify';
     font-size: 45px;
+    line-height: unset;
   }
   .header-mobile h2 {
     padding-top: 10px;
-    font-size: 28px;
+    font-size: 28px !important;
+  }
+}
+
+@media screen and (max-width: 356px) {
+  .header-mobile h1 {
+    font-size: 40px;
+  }
+  .header-mobile h2 {
+    font-size: 23px !important;
   }
 }

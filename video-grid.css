@@ -2,7 +2,7 @@
 #ticket {
   position:absolute;
   width:100%;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 120px);
   background-color:green;
   overflow: hidden;
   display:grid;
@@ -157,6 +157,9 @@
 @media screen and (max-width: 640px) {
   .message-content {
     flex-direction: column;
+  }
+  #ticket {
+    height: calc(100vh - 150px);
   }
 }
 
