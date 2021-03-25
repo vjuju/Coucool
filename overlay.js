@@ -36,13 +36,15 @@ titles.forEach((title, index) => {
     translateContent(title.parentNode.querySelector('section'));
     translateTitles(index, Array.from(titles).filter(t => t !== title), title)
   });
-  title.addEventListener('mouseover', e => {
-    stereoscopic(title, initial_font)
-    interval = setInterval( e => stereoscopic(title, initial_font), 800)
-  });
-  title.addEventListener('mouseout', e => {
-    clearInterval(interval)
-  });
+  if (window.innerWidth > 780) {
+    title.addEventListener('mouseover', e => {
+      stereoscopic(title, initial_font)
+      interval = setInterval( e => stereoscopic(title, initial_font), 800)
+    });
+    title.addEventListener('mouseout', e => {
+      clearInterval(interval)
+    });
+  }
 });
 
 
