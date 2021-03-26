@@ -59,3 +59,10 @@ a:focus {
     font-size: 23px;
   }
 }
+
+@media screen and (max-width :356px) {
+  .overlay #back-button {
+    bottom: 12px;
+    right: 23px;
+  }
+}

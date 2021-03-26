@@ -25,10 +25,9 @@ accordions.forEach(accordion => {
 });
 
 titles.forEach((title, index) => {
-  let initial_font = getComputedStyle(title).getPropertyValue("font-family");
   title.addEventListener('click', e => {
     if (window.innerWidth <= 780) {
-      stereoscopic(title, initial_font)
+      stereoscopic(title)
     } else {
       clearInterval(interval);
     }
@@ -38,8 +37,8 @@ titles.forEach((title, index) => {
   });
   if (window.innerWidth > 780) {
     title.addEventListener('mouseover', e => {
-      stereoscopic(title, initial_font)
-      interval = setInterval( e => stereoscopic(title, initial_font), 800)
+      stereoscopic(title)
+      interval = setInterval( e => stereoscopic(title), 1000)
     });
     title.addEventListener('mouseout', e => {
       clearInterval(interval)
@@ -55,10 +54,17 @@ backButton.addEventListener('click', e => {
   });
 });
 
+const shuffle  = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
 
-const stereoscopic = (element, initial_font) => {
-  let fonts = ['Trash', 'Mantra Alt', 'Harbour', 'Saonara', 'Circular'].filter(f => f !== initial_font)
-  fonts.push(initial_font)
+
+const stereoscopic = (element) => {
+  let fonts = ['Trash', 'Mantra Alt', 'Harbour', 'Saonara', 'Circular']
+  shuffle(fonts)
   fonts.forEach((font, index) => {
     setTimeout(e => element.style.fontFamily = font, index * 200);
   });
@@ -72,6 +78,7 @@ const toggleAccordion = (active, element) => {
     element.parentNode.classList.add('active');
   }
 }
+
 
 const initiateView = (title, button) => {
 

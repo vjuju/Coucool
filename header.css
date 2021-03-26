@@ -115,8 +115,11 @@ header h1, .header-desktop .dates, .header-mobile h2 {
 }
 
 @media screen and (max-width: 356px) {
+  header {
+    height: 115px;
+  }
   .header-mobile h1 {
-    font-size: 40px;
+    font-size: 36px;
   }
   .header-mobile h2 {
     font-size: 23px !important;

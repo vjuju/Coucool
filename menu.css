@@ -239,7 +239,7 @@ section::-webkit-scrollbar {
   .menu-window {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column-reverse;
     height: calc(100% - 90px);
   }
@@ -277,13 +277,17 @@ section::-webkit-scrollbar {
     padding-left: 0;
     height: auto;
     margin: 0;
+    width: 90%;
     margin-bottom: 1rem;
+    padding-left: 1.5rem;
   }
   .menu-left {
     padding-right: 0;
     border-right: none;
     height: auto;
     margin: 0;
+    width: 90%;
+    padding-left: 1.5rem;
     transition: 0.5s;
   }
   .menu-left.visible {
@@ -320,20 +324,35 @@ section::-webkit-scrollbar {
     width: auto;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .menu-right a.title {
+    font-size: 43px;
+    height: 56px;
+    line-height: 56px;
+  }
+}
 @media screen and (max-width: 356px) {
+  .menu-window {
+    height: calc(100vh - 80px);
+  }
   .menu-right {
     margin-bottom: 1rem;
   }
   .menu-right a.title {
-    font-size: 41px;
-    height: 60px;
-    line-height: 60px;
+    font-size: 34px;
+    height: 40px;
+    line-height: 40px;
   }
   .menu-left h3 strong {
-    font-size: 30px;
+    font-size: 25px;
   }
   .menu-left h3 {
     font-size: 17px;
+  }
+  .menu-left .languages {
+    bottom: 12px;
+    right: 23px;
   }
 }
 

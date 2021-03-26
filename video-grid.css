@@ -163,3 +163,9 @@
   }
 }
 
+@media screen and (max-width: 356px) {
+  #ticket {
+    height: calc(100vh - 115px);
+  }
+}
+
