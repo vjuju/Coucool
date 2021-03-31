@@ -31,7 +31,7 @@ titles.forEach((title, index) => {
     } else {
       clearInterval(interval);
     }
-    initiateView(title, document.querySelector('#back-button'));
+    backButton.style.opacity = 1;
     translateContent(title.parentNode.querySelector('section'));
     translateTitles(index, Array.from(titles).filter(t => t !== title), title)
   });
@@ -78,12 +78,6 @@ const toggleAccordion = (active, element) => {
     element.parentNode.classList.add('active');
   }
 }
-
-
-const initiateView = (title, button) => {
-
-  button.style.opacity = 1;
-};
 
 const translateTitles = (position, titles, clicked_title) => {
   titles.forEach((title, index) => {
