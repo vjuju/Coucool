@@ -22,7 +22,7 @@
 }
 .menu-right {
   grid-area: 1 / 2 / 2 / 3;
-  height: calc(100vh - 120px);
+  height: 90%;
   margin: auto 0;
   padding-left: 5rem;
   display: flex;
