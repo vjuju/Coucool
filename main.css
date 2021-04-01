@@ -1,9 +1,10 @@
   :root{
-    --footer-header-height:30;
+    --footer-header-height:120;
     --video-initial-height:1500;
     --video-initial-width:2900;
     --video-ratio:calc(var(--video-initial-width) / var(--video-initial-height) );
     --main-color:rgb(243, 211, 171);
+    --background-color:rgb(23,22,18);
     height: 100%;
   }
 
@@ -15,10 +16,10 @@
     font-family: 'Mantra Alt';
     min-height: 100%;
   }
-  footer, header {
+  header {
     width:100%;
     height: calc(var(--footer-header-height) * 1px);
-    background-color: black; color:white
+    background-color: var(--background-color); color:white
   }
   main {
     width:100%;
