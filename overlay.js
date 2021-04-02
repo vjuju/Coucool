@@ -14,7 +14,7 @@ hamburgers.forEach(button => {
     } else if (button.classList.contains('arrow')) {
       backToMenu(button)
     } else {
-      showMenu(ticket, button, menu)
+      showMenu(ticket, menu)
     }
   });
 });
@@ -31,9 +31,16 @@ switchMenuLinks.forEach(link => {
     titleToDisplay = document.getElementById(link.getAttribute('href').substring(1)).previousElementSibling
     menuIndex = Array.from(titles).findIndex(title => title === titleToDisplay)
     otherTitles = Array.from(titles).filter(t => t !== titleToDisplay)
-    resetPositions(titles)
-    translateContent(titleToDisplay.parentNode.querySelector('section'))
-    translateTitles(menuIndex, otherTitles)
+    if (menu.classList.contains('open')) {
+      resetPositions(titles)
+    } else {
+      menu.classList.add('open');
+      crossToArrow(hamburgers);
+    }
+    setTimeout(e => {
+      translateContent(titleToDisplay.parentNode.querySelector('section'))
+      translateTitles(menuIndex, otherTitles)
+    }, 200)
   });
 });
 
@@ -86,7 +93,6 @@ const shuffle  = (array) => {
 }
 
 const hideMenu = (ticket, button, menu) => {
-  ticket.classList.remove('no-height')
   button.classList.remove('cross')
   menu.classList.remove('open');
 }
@@ -97,9 +103,8 @@ const backToMenu = (button) => {
   button.classList.add('cross')
 }
 
-const showMenu = (ticket, button, menu) => {
-  setTimeout(e => ticket.classList.add('no-height'), 500);
-  button.classList.add('cross')
+const showMenu = (ticket, menu) => {
+  hamburgers.forEach(button => button.classList.add('cross'))
   menu.classList.add('open');
 }
 

@@ -15,6 +15,7 @@
     grid-template-rows: auto 1fr auto;
     font-family: 'Mantra Alt';
     min-height: 100%;
+    overflow: hidden;
   }
   header {
     width:100%;
@@ -23,7 +24,6 @@
   }
   main {
     width:100%;
-    overflow: hidden;
   }
   .no-height {
     height: 0 !important;

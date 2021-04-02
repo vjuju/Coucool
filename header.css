@@ -93,7 +93,7 @@ header h1, .header-desktop .dates, .header-mobile h2 {
 
 @media screen and (max-width: 1000px) {
   header {
-    height: 150px;
+    height: 115px;
     padding: 0 2rem;
   }
   .header-desktop {

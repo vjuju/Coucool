@@ -6,13 +6,12 @@ const NB_IMG = 331;
 const colorful_images_numbers = [91, 118, 214, 252, 280]
 const message_types = ['congratulations']
 var isPlaying = false;
-
 /*
 class VideoPlayer extends HTMLElement {
     constructor() {
         // Toujours appeler "super" d'abord dans le constructeur
         super();
-  
+
         // Ecrire la fonctionnalité de l'élément ici
         var shadow = this.attachShadow({mode: 'open'});
 
@@ -20,8 +19,8 @@ class VideoPlayer extends HTMLElement {
         var video = document.createElement('video');
         var style = document.createElement('style');
         var source = document.createElement('style');
-        style.textContent = 'video {object-fit:cover; height: 100%; width: 100%;}' 
-        
+        style.textContent = 'video {object-fit:cover; height: 100%; width: 100%;}'
+
         wrapper.setAttribute('class','wrapper');
         var icon = document.createElement('span');
         icon.setAttribute('class','icon');
@@ -134,13 +133,13 @@ function launchControls() {
     const rwdText = "REWIND";
     //const magicImage = document.querySelector(".magic-image");
     let interval;
-    let time = 0; 
+    let time = 0;
     // time here is the index of the first top left corner image in the grid,
     // it can go up to 330
-    
+
     //media.removeAttribute('controls');
     //controls.style.visibility = 'visible';
-    
+
     playOrPause.addEventListener('click', playPauseMedia);
     fwdOrRwd.addEventListener('click', toggleFwdOrRwd);
 
@@ -236,7 +235,7 @@ function launchControls() {
         }
     }
     */
-    
+
 }
 
 function resizeVideoGridContainer() {
