@@ -18,7 +18,7 @@ a:focus {
   height: 0%;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s, visibility 0.5s, height 0.5s;
+  transition: opacity 0.3s, visibility 0.3s, height 0.8s;
   display: flex;
   align-items: flex-end;
 }
@@ -26,43 +26,5 @@ a:focus {
   opacity: 1;
   visibility: visible;
   height: 100%;
-}
-
-.overlay #back-button {
-  top: 40px;
-  font-family: "Circular";
-  position: absolute;
-  left: 20%;
-  color: #FFD6AC;
-  cursor: pointer;
-  font-size: 36px;
-  opacity: 0;
-  transition: 0.2s;
-  font-weight: bold;
-}
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    left: 20%;
-  }
-  100% {
-    opacity: 1;
-    left: 0;
-  }
-}
-
-@media screen and (max-width: 780px) {
-  .overlay #back-button {
-    top: 36px;
-    left: 26px;
-    font-size: 23px;
-  }
-}
-
-@media screen and (max-width :356px) {
-  .overlay #back-button {
-    bottom: 12px;
-    right: 23px;
-  }
+  transition: 0.5s;
 }

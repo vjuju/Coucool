@@ -45,17 +45,23 @@ header h1, .header-desktop .dates, .header-mobile h2 {
   transition: opacity 0.25s ease;
 }
 
-.hamburger.active .top {
+.hamburger.cross .top {
   transform: translateY(11px) translateX(0) rotate(45deg);
   background: #FFD6AC;
 }
-.hamburger.active .middle {
+.hamburger.cross .middle, .hamburger.arrow .middle {
   opacity: 0;
   background: #FFD6AC;
 }
-.hamburger.active .bottom {
+.hamburger.cross .bottom {
   transform: translateY(-11px) translateX(0) rotate(-45deg);
   background: #FFD6AC;
+}
+.hamburger.arrow .top {
+  transform: translateY(11px) translateX(0) rotate(-35deg) scale(1);
+}
+.hamburger.arrow .bottom {
+  transform: translateY(7.5px) translateX(0) rotate(35deg) scale(1);
 }
 .hamburger span {
   background: #FFD6AC;

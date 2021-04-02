@@ -1,19 +1,21 @@
-const hamburger = document.querySelectorAll('.hamburger')
+const hamburgers = document.querySelectorAll('.hamburger')
 const titles = document.querySelectorAll('.title')
-const backButton = document.getElementById('back-button');
 const accordions = document.querySelectorAll('.accordion-item h4');
+const menu = document.querySelector('#menu')
+const ticket = document.querySelector('#ticket')
+const switchMenuLinks = document.querySelectorAll('.switch-menu');
+const backToHomeLink = document.getElementById('back-to-home');
 let interval = null;
 
-hamburger.forEach(button => {
+hamburgers.forEach(button => {
   button.addEventListener('click', e => {
-    if (menu.classList.contains('open')) {
-     document.querySelector('#ticket').classList.toggle('no-height')
-  } else {
-    setTimeout(e => document.querySelector('#ticket').classList.toggle('no-height'), 500);
-  }
-    document.querySelector('#menu').classList.toggle('open');
-    hamburger[0].classList.toggle('active');
-    hamburger[1].classList.toggle('active');
+    if (button.classList.contains('cross')) {
+      hideMenu(ticket, button, menu)
+    } else if (button.classList.contains('arrow')) {
+      backToMenu(button)
+    } else {
+      showMenu(ticket, button, menu)
+    }
   });
 });
 
@@ -24,35 +26,57 @@ accordions.forEach(accordion => {
   });
 });
 
-titles.forEach((title, index) => {
-  title.addEventListener('click', e => {
-    if (window.innerWidth <= 780) {
-      stereoscopic(title)
-    } else {
-      clearInterval(interval);
-    }
-    backButton.style.opacity = 1;
-    translateContent(title.parentNode.querySelector('section'));
-    translateTitles(index, Array.from(titles).filter(t => t !== title), title)
+switchMenuLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    titleToDisplay = document.getElementById(link.getAttribute('href').substring(1)).previousElementSibling
+    menuIndex = Array.from(titles).findIndex(title => title === titleToDisplay)
+    otherTitles = Array.from(titles).filter(t => t !== titleToDisplay)
+    resetPositions(titles)
+    translateContent(titleToDisplay.parentNode.querySelector('section'))
+    translateTitles(menuIndex, otherTitles)
   });
-  if (window.innerWidth > 780) {
+});
+
+titles.forEach((title, index) => {
+  if (window.innerWidth <= 780) {
+    title.addEventListener('click', e => {
+      stereoscopic(title)
+      hamburgers.forEach(button => {
+        button.classList.remove('cross')
+        button.classList.add('arrow')
+      })
+      translateContent(title.parentNode.querySelector('section'));
+      translateTitles(index, Array.from(titles).filter(t => t !== title))
+    });
+  } else {
+    title.addEventListener('click', e => {
+      clearInterval(interval);
+      crossToArrow(hamburgers);
+      translateContent(title.parentNode.querySelector('section'));
+      translateTitles(index, Array.from(titles).filter(t => t !== title))
+    });
     title.addEventListener('mouseover', e => {
       stereoscopic(title)
       interval = setInterval( e => stereoscopic(title), 1000)
     });
-    title.addEventListener('mouseout', e => {
-      clearInterval(interval)
-    });
+    title.addEventListener('mouseout', e => clearInterval(interval))
   }
 });
 
-
-backButton.addEventListener('click', e => {
-  titles.forEach(title => {
-    e.currentTarget.style.opacity = 0;
-    resetPositions(title);
+backToHomeLink.addEventListener('click', e => {
+  hamburgers.forEach(button => {
+    backToMenu(button)
+    hideMenu(ticket, button, menu)
   });
 });
+
+const crossToArrow = (hamburgers) => {
+  hamburgers.forEach(button => {
+    button.classList.remove('cross')
+    button.classList.add('arrow')
+  })
+};
+
 
 const shuffle  = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -61,9 +85,27 @@ const shuffle  = (array) => {
   }
 }
 
+const hideMenu = (ticket, button, menu) => {
+  ticket.classList.remove('no-height')
+  button.classList.remove('cross')
+  menu.classList.remove('open');
+}
+
+const backToMenu = (button) => {
+  resetPositions(titles);
+  button.classList.remove('arrow')
+  button.classList.add('cross')
+}
+
+const showMenu = (ticket, button, menu) => {
+  setTimeout(e => ticket.classList.add('no-height'), 500);
+  button.classList.add('cross')
+  menu.classList.add('open');
+}
+
 
 const stereoscopic = (element) => {
-  let fonts = ['Trash', 'Mantra Alt', 'Harbour', 'Saonara', 'Circular']
+  let fonts = ['Trash', 'Mantra Alt', 'Harbour', 'Saonara', 'Circular Bold']
   shuffle(fonts)
   fonts.forEach((font, index) => {
     setTimeout(e => element.style.fontFamily = font, index * 200);
@@ -79,7 +121,7 @@ const toggleAccordion = (active, element) => {
   }
 }
 
-const translateTitles = (position, titles, clicked_title) => {
+const translateTitles = (position, titles) => {
   titles.forEach((title, index) => {
     title.style.transform = `translateY(${index < position ? '-' : ''}100vh)`;
     title.parentNode.classList.add('no-height');
@@ -91,20 +133,21 @@ const translateTitles = (position, titles, clicked_title) => {
   }
 };
 
-const translateContent = (content, title) => {
+const translateContent = (content) => {
   content.style.opacity = 1;
   content.style.height = '60vh';
 };
 
-const resetPositions = (title) => {
-  title.parentNode.classList.remove('no-height');
-
-  title.parentNode.querySelector('section').style.height = 0;
-  title.parentNode.querySelector('section').style.opacity = 0;
-  if (window.innerWidth <= 780) {
-    document.querySelector('.menu-right').style.marginBottom = `1rem`;
-    document.querySelector('.menu-left').classList.remove('visible');
-    document.querySelector('.languages').classList.remove('hidden');
-  }
-  title.style.transform = "translateY(0)";
+const resetPositions = (titles) => {
+  titles.forEach(title => {
+    title.parentNode.classList.remove('no-height');
+    title.parentNode.querySelector('section').style.height = 0;
+    title.parentNode.querySelector('section').style.opacity = 0;
+    if (window.innerWidth <= 780) {
+      document.querySelector('.menu-right').style.marginBottom = `1rem`;
+      document.querySelector('.menu-left').classList.remove('visible');
+      document.querySelector('.languages').classList.remove('hidden');
+    }
+    title.style.transform = "translateY(0)";
+  });
 }
