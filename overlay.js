@@ -6,6 +6,8 @@ const ticket = document.querySelector('#ticket')
 const switchMenuLinks = document.querySelectorAll('.switch-menu');
 const backToHomeLink = document.getElementById('back-to-home');
 let interval = null;
+let timeOut = null;
+const fonts = ['Trash', 'Mantra Alt', 'Harbour', 'Saonara', 'Circular Bold']
 
 hamburgers.forEach(button => {
   button.addEventListener('click', e => {
@@ -66,7 +68,10 @@ titles.forEach((title, index) => {
       stereoscopic(title)
       interval = setInterval( e => stereoscopic(title), 1000)
     });
-    title.addEventListener('mouseout', e => clearInterval(interval))
+    title.addEventListener('mouseout', e => {
+      clearTimeout(timeOut)
+      clearInterval(interval)
+    });
   }
 });
 
@@ -110,11 +115,12 @@ const showMenu = (ticket, menu) => {
 
 
 const stereoscopic = (element) => {
-  let fonts = ['Trash', 'Mantra Alt', 'Harbour', 'Saonara', 'Circular Bold']
   shuffle(fonts)
-  fonts.forEach((font, index) => {
-    setTimeout(e => element.style.fontFamily = font, index * 200);
-  });
+  timeOut = setTimeout(e => {
+    fonts.forEach((font, index) => {
+      timeOut = setTimeout(e => element.style.fontFamily = font, index * 200);
+    })
+  }, 0)
 };
 
 const toggleAccordion = (active, element) => {
