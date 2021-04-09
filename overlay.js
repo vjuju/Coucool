@@ -6,7 +6,7 @@ const ticket = document.querySelector('#ticket')
 const switchMenuLinks = document.querySelectorAll('.switch-menu');
 const backToHomeLink = document.getElementById('back-to-home');
 let interval = null;
-let timeOut = null;
+let timeOuts = [];
 const fonts = ['Trash', 'Mantra Alt', 'Harbour', 'Saonara', 'Circular Bold']
 
 hamburgers.forEach(button => {
@@ -59,6 +59,7 @@ titles.forEach((title, index) => {
     });
   } else {
     title.addEventListener('click', e => {
+      timeOuts.forEach(t => clearTimeout(t));
       clearInterval(interval);
       crossToArrow(hamburgers);
       translateContent(title.parentNode.querySelector('section'));
@@ -69,7 +70,7 @@ titles.forEach((title, index) => {
       interval = setInterval( e => stereoscopic(title), 1000)
     });
     title.addEventListener('mouseout', e => {
-      clearTimeout(timeOut)
+      timeOuts.forEach(t => clearTimeout(t))
       clearInterval(interval)
     });
   }
@@ -116,11 +117,9 @@ const showMenu = (ticket, menu) => {
 
 const stereoscopic = (element) => {
   shuffle(fonts)
-  timeOut = setTimeout(e => {
-    fonts.forEach((font, index) => {
-      timeOut = setTimeout(e => element.style.fontFamily = font, index * 200);
-    })
-  }, 0)
+  fonts.forEach((font, index) => {
+    timeOuts.push(setTimeout(e => element.style.fontFamily = font, index * 200));
+  })
 };
 
 const toggleAccordion = (active, element) => {
