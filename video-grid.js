@@ -63,13 +63,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 function displayImages() {
     const gridContainer = document.querySelector('.grid-container');
     var i;
-    console.log("pouet")
     for (i = 0; i < NB_IMAGES; i++) {
         let img = document.createElement('img');
         img.style.gridRow = Math.floor(i / NB_COLUMNS) + 1;
         img.style.gridColumn = i + 1 - Math.floor(i / NB_COLUMNS) * NB_COLUMNS;
-        //img.src = `/dance_images/dance_${img_nb}.jpg`;
-        //console.log(img);
         gridContainer.append(img);
     }
 }
@@ -82,10 +79,15 @@ function setImgSrc(time){
         let img_nb = i > NB_IMAGES ? i - NB_IMAGES : i ;
         let img_nb_str = `${img_nb}`.padStart(5, '0');
         img.src = `http://vincky.com/coucool/2021/dance_images/dance_${img_nb_str}.jpg`;
-        if (colorful_images_numbers.includes(i)) {
+        /*
+        if (true) { 
             img.classList.add('clickable');
-            img.addEventListener('click', showMessage);
+            img.addEventListener('click', showContributions);
+        } else {
+            img.classList.remove('clickable');
+            img.removeEventListener('click');
         }
+        */
         i++;
     })
 
@@ -101,17 +103,39 @@ function setImgSrc(time){
     }*/
 }
 
-function showMessage(message_type){
-    if(isPlaying) {
-        const message = document.querySelector('.message');
-        message.style.visibility = 'visible';
+function showContributions(){
+    console.log("shouldShowContributions");
+    showMessage('contributions');
+}
+
+function onImageClick(event){
+    /*if (colorful_images_numbers.includes(i)) {*/
+    const imageClicked = event.target;
+    const imgNb = getImgNumber(imageClicked);
+    if (colorful_images_numbers.includes(imgNb)) {
+        showMessage('congrats');
+    } else {
+        showMessage('bad-timing');
     }
 }
 
-function hideMessage(){
-    console.log('should be hidden')
-    const message = document.querySelector('.message');
-    message.style.visibility = 'hidden';
+function getImgNumber(image) {
+    const src = image.src
+    const regex = /\d+/g;
+    const found = src.match(regex);
+    const nb = parseInt(found[found.length - 1]);
+    return nb
+}
+
+
+function showMessage(message_type){
+    const message = document.getElementById(message_type);
+    message.style.visibility = 'visible';
+}
+
+function hideMessages(){
+    const messages = document.querySelectorAll('.message');
+    messages.forEach((message) => message.style.visibility = 'hidden');
 }
 
 /*
@@ -145,10 +169,11 @@ function launchControls() {
 
 
     function playPauseMedia() {
-        let clickables = document.querySelectorAll('.clickable');
+        let images = document.querySelectorAll('#video-grid-container img');
+        console.log(images);
         if(isPlaying) {
             playOrPause.textContent= playText;
-            clickables.forEach((clickable) => clickable.removeEventListener('click', showMessage));
+            images.forEach((image) => image.removeEventListener('click', onImageClick));
             explanations.forEach((explanation) => explanation.style.visibility = 'visible');
             clearInterval(interval);
             interval = null;
@@ -156,7 +181,8 @@ function launchControls() {
             //magicImage.style.visibility = 'hidden';
         } else {
             explanations.forEach((explanation) => explanation.style.visibility = 'hidden');
-            clickables.forEach((clickable) => clickable.addEventListener('click', showMessage));
+            images.forEach((image) => image.addEventListener('click', onImageClick));
+            /*clickables.forEach((clickable) => clickable.addEventListener('click', showMessage));*/
             playOrPause.textContent=pauseText;
             //magicImage.style.visibility = 'visible';
             interval = setInterval(playNext, 200);
@@ -243,7 +269,7 @@ function resizeVideoGridContainer() {
     let videoHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--video-initial-height'));
     let footerAndHeaderHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--footer-header-height'));
     let videoRatio = videoWidth / videoHeight;
-    let mainRatio = window.innerWidth / (window.innerHeight - 2*parseInt(footerAndHeaderHeight));
+    let mainRatio = window.innerWidth / (window.innerHeight - parseInt(footerAndHeaderHeight));
     let videoGridContainer = document.querySelector("#video-grid-container");
     if (videoRatio >  mainRatio) {
         videoGridContainer.classList.replace("overflowing-height", "overflowing-width");

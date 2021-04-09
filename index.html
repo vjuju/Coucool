@@ -26,7 +26,7 @@
     </header>
     <main>
       <div class="panel" id="ticket">
-        <div id="video-grid-container" class="overflowing-height" style="position:absolute; background-color:black;">
+        <div id="video-grid-container" class="overflowing-height">
           <!--
           <div class="video-container" style="width:100%; height:100%; background-color:grey; position: absolute;">
             <video controls style="height: 100%; width: 100%;">
@@ -45,7 +45,7 @@
             </div>
           </div>
         </div>
-        <div class="message" id="congrats" onclick="hideMessage()">
+        <div class="message" id="congrats">
           <div class="message-content">
             <div class="image-container">
               <img src="http://vincky.com/coucool/2021/dance_images/dance_00091.jpg">
@@ -54,8 +54,28 @@
               <div class="text-content">
                 <div class="congrats-title"> FÉLICITATIONS!</div>
                 <div> Tu vas maintenant pouvoir accéder au sésame de Coucool.</div>
-                <div class="button"> Je contribue</div>
+                <div class="button" onclick="showContributions()"> Je contribue</div>
                 <div> Tu veux en savoir plus sur Coucool avant d’acheter ta contribution ? <br>Alors <a href="#engaged" class="switch-menu"> viens par ici.</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="message" id="contributions" onclick="hideMessages()">
+          <div class="message-content" style="background-color:green; display: grid;place-items: center;">
+            <div>IFRAME WEEZEVENT</div>
+          </div>
+        </div>
+        <div class="message" id="bad-timing" onclick="hideMessages()">
+          <div class="message-content">
+            <div class="image-container">
+              <img src="http://vincky.com/coucool/2021/dance_images/dance_00091.jpg">
+            </div>
+            <div class="text-container">
+              <div class="text-content">
+                <div class="congrats-title"> MAUVAIS TIMING !</div>
+                <div> Le temps est précieux mais ce n'est pas une raison pour se précipiter</div>
+                <div class="button" onclick="hideMessages()"> Réessayer</div>
+                <div> C'est la première fois que tu entends parler de Coucool ? <br>Alors <a href="#engaged" class="switch-menu"> lis ceci.</a></div>
               </div>
             </div>
           </div>

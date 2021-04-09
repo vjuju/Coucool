@@ -16,6 +16,7 @@
     font-family: 'Mantra Alt';
     min-height: 100%;
     overflow: hidden;
+    background-color: var(--background-color);
   }
   header {
     width:100%;
@@ -27,5 +28,10 @@
   }
   .no-height {
     height: 0 !important;
+  }
+
+  .button {
+    cursor: pointer;
+    pointer-events: auto;
   }
 
