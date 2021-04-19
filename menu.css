@@ -4,7 +4,7 @@
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  height: calc(100vh - 120px);
+  height: 100vh;
   width: 100%;
   font-family: "Circular";
   color: #FFD6AC;
@@ -22,7 +22,7 @@
 }
 .menu-right {
   grid-area: 1 / 2 / 2 / 3;
-  height: calc(100vh - 120px);
+  height: 100vh;
   margin: auto 0;
   padding-left: 5rem;
   display: flex;
@@ -201,6 +201,9 @@ section::-webkit-scrollbar {
   font-size: 25px;
   color: #FFD6AC;
   text-decoration: underline;
+}
+.menu-right .nostalgy .site a.disabled {
+  visibility: hidden;
 }
 .menu-right .nostalgy i {
   text-decoration: none;

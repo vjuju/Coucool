@@ -5,6 +5,7 @@
     --video-ratio:calc(var(--video-initial-width) / var(--video-initial-height) );
     --main-color:rgb(243, 211, 171);
     --background-color:rgb(23,22,18);
+    --background-color-transparent:rgba(23,22,18, 0.92);
     height: 100%;
   }
 
