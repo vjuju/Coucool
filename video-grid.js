@@ -80,7 +80,7 @@ function setImgSrc(time){
         let img_nb_str = `${img_nb}`.padStart(5, '0');
         img.src = `http://vincky.com/coucool/2021/dance_images/dance_${img_nb_str}.jpg`;
         /*
-        if (true) { 
+        if (true) {
             img.classList.add('clickable');
             img.addEventListener('click', showContributions);
         } else {
