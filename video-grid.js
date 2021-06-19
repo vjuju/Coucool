@@ -2,7 +2,6 @@ const NB_COLUMNS = 8;
 const NB_ROWS = 3;
 var NB_IMAGES = NB_ROWS * NB_COLUMNS;
 const INTERVAL_MS = 100;
-const NB_IMG = 331;
 const colorful_images_numbers = [91, 118, 214, 252, 280]
 const message_types = ['congratulations']
 var isPlaying = false;
@@ -76,7 +75,7 @@ function setImgSrc(time){
     var i = time;
 
     images.forEach((img) => {
-        let img_nb = i > NB_IMAGES ? i - NB_IMAGES : i ;
+        let img_nb = i >= NB_IMG ? i - NB_IMG : i ;
         let img_nb_str = `${img_nb}`.padStart(5, '0');
         img.src = `http://vincky.com/coucool/2021/dance_images/dance_${img_nb_str}.jpg`;
         /*
@@ -104,7 +103,7 @@ function setImgSrc(time){
 }
 
 function showContributions(){
-    console.log("shouldShowContributions");
+    //console.log("shouldShowContributions");
     showMessage('contributions');
 }
 
@@ -170,17 +169,15 @@ function launchControls() {
 
     function playPauseMedia() {
         let images = document.querySelectorAll('#video-grid-container img');
-        console.log(images);
+        //console.log(images);
         if(isPlaying) {
             playOrPause.textContent= playText;
             images.forEach((image) => image.removeEventListener('click', onImageClick));
-            explanations.forEach((explanation) => explanation.style.visibility = 'visible');
             clearInterval(interval);
             interval = null;
             isPlaying = false;
             //magicImage.style.visibility = 'hidden';
         } else {
-            explanations.forEach((explanation) => explanation.style.visibility = 'hidden');
             images.forEach((image) => image.addEventListener('click', onImageClick));
             /*clickables.forEach((clickable) => clickable.addEventListener('click', showMessage));*/
             playOrPause.textContent=pauseText;
@@ -188,6 +185,7 @@ function launchControls() {
             interval = setInterval(playNext, 200);
             isPlaying = true;
         }
+        explanations.forEach((explanation) => explanation.classList.toggle("hidden"));
     }
 
     function toggleFwdOrRwd() {

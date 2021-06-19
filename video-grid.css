@@ -1,4 +1,8 @@
 
+#preload {
+  display:none;
+}
+
 #ticket {
   position:absolute;
   width:100%;
@@ -32,6 +36,15 @@
 
   .explanations {
     z-index: 20;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+  }
+  
+  .explanations.hidden {
+       opacity: 0;
   }
 
   .clickable {
