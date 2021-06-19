@@ -166,7 +166,6 @@ function launchControls() {
     playOrPause.addEventListener('click', playPauseMedia);
     fwdOrRwd.addEventListener('click', toggleFwdOrRwd);
 
-
     function playPauseMedia() {
         let images = document.querySelectorAll('#video-grid-container img');
         //console.log(images);
@@ -176,6 +175,7 @@ function launchControls() {
             clearInterval(interval);
             interval = null;
             isPlaying = false;
+            explanations.forEach((explanation) => explanation.style.display = 'block');
             //magicImage.style.visibility = 'hidden';
         } else {
             images.forEach((image) => image.addEventListener('click', onImageClick));
@@ -184,6 +184,9 @@ function launchControls() {
             //magicImage.style.visibility = 'visible';
             interval = setInterval(playNext, 200);
             isPlaying = true;
+            setTimeout(function() {
+                document.querySelectorAll('.explanations').forEach((explanation) => explanation.style.display = 'none')
+            }, 500);
         }
         explanations.forEach((explanation) => explanation.classList.toggle("hidden"));
     }
