@@ -145,7 +145,7 @@ const translateTitles = (position, titles) => {
 
 const translateContent = (content) => {
   content.style.opacity = 1;
-  content.style.height = '60vh';
+  content.style.height = '70vh';
 };
 
 const resetPositions = (titles) => {

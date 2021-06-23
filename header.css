@@ -87,7 +87,7 @@ header h1, .header-desktop .dates, .header-mobile h2 {
     font-size: 15px;
   }
   .header-desktop .dates {
-    font-size: 21px;
+    font-size: 19px;
   }
 }
 
@@ -116,7 +116,7 @@ header h1, .header-desktop .dates, .header-mobile h2 {
   }
   .header-mobile h2 {
     padding-top: 10px;
-    font-size: 28px !important;
+    font-size: 23px !important;
   }
 }
 
@@ -128,6 +128,6 @@ header h1, .header-desktop .dates, .header-mobile h2 {
     font-size: 36px;
   }
   .header-mobile h2 {
-    font-size: 23px !important;
+    font-size: 19px !important;
   }
 }

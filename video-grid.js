@@ -150,10 +150,10 @@ function launchControls() {
     const playOrPause = document.querySelector('.playOrPause');
     const fwdOrRwd = document.querySelector('.fwdOrRwd');
     const explanations = document.querySelectorAll('.explanations');
-    const playText = "Play the dance";
-    const pauseText = "Pause the dance";
-    const fwdText = "FORWARD";
-    const rwdText = "REWIND";
+    const playText = "Dansons";
+    const pauseText = "Pause";
+    const fwdText = "A L'ENDROIT";
+    const rwdText = "A L'ENVERS";
     //const magicImage = document.querySelector(".magic-image");
     let interval;
     let time = 0;
