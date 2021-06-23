@@ -39,9 +39,7 @@
             <div class="explanations black-background">
             </div>
             <div class="explanations card">
-              <div>
-                Pour atteindre le sésame, il faut savoir saisir l'instant
-              </div>
+              <div>Pour atteindre le sésame, il faut savoir saisir l'instant</div>
             </div>
           </div>
         </div>
@@ -94,10 +92,10 @@
           <div class="menu-left">
             <span></span>
             <div class="menu-contact">
-              <h3><strong>Coucool</strong> <br>est un rassemblement <br>artistique mis en fête <br>par Éros Sélavy.</h3>
+              <h3 data-i18n="[html]menu-subline"></h3>
               <br>
               <div class="links">
-                <a id="mail" href="mailto:eros@cou.cool" >Lui Ecrire</a>
+                <a id="mail" href="mailto:eros@cou.cool" data-i18n="menu-cta-contact"></a>
                 <a href="https://www.instagram.com/coucool_eros_selavy" target="_blank">
                   <i class="fab fa-instagram"></i>
                 </a>
@@ -106,11 +104,11 @@
                 </a>
               </div>
             </div>
-            <span class="languages"><a href="#fr">Fr</a> - <a href="#en">En</a></span>
+            <span class="languages"><a href="#fr" data-locale="fr">Fr</a> - <a href="#en" data-locale="en">En</a></span>
           </div>
           <div class="menu-right">
             <div class="engaged subpart">
-              <a href="#engaged" class="title">Engagé.e</a>
+              <a href="#engaged" class="title" data-i18n="menu-title-engaged"></a>
               <section id="engaged">
                 <p>Cher.e.s coucools,</p>
                 <p>
@@ -215,7 +213,7 @@
               </section>
             </div>
             <div class="useful subpart">
-              <a href="#useful" class="title">Utilitaire</a>
+              <a href="#useful" class="title" data-i18n="menu-title-utility"></a>
               <section id="useful">
                 <p>La foire aux questions et la fête aux explications.</p>
                 <div class="accordion-item">
@@ -314,7 +312,7 @@
               </section>
             </div>
             <div class="curious subpart">
-              <a href="#curious" class="title">Curieux.se</a>
+              <a href="#curious" class="title" data-i18n="menu-title-curious"></a>
               <section id="curious">
                 <h4>Raison d'être</h4>
                 <p>Parce que nous sommes convaincu.e.s que la rencontre et la découverte sont sources de bonheur, l’association Coucool organise des événements promouvant la bienveillance et créant des espaces de liberté, d’expérimentations et d’émotions.</p>
@@ -371,7 +369,7 @@
               </section>
             </div>
             <div class="nostalgy subpart">
-              <a href="#nostalgy" class="title">Nostalgique</a>
+              <a href="#nostalgy" class="title" data-i18n="menu-title-nostalgic"></a>
               <section id="nostalgy">
                 <h3><em>Traverser le temps avec la magie de la pensée et t'aimer encore</em></h3>
                 <div class="site">
@@ -430,4 +428,14 @@
   <script type="text/javascript" src="video-grid.js"></script>
   <script type="text/javascript" src="overlay.js"></script>
   <script src="https://kit.fontawesome.com/9b77b2a18b.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="jquery.i18n/CLDRPluralRuleParser.js"></script>
+  <script src="jquery.i18n/jquery.i18n.js"></script>
+  <script src="jquery.i18n/jquery.i18n.messagestore.js"></script>
+  <script src="jquery.i18n/jquery.i18n.fallbacks.js"></script>
+  <script src="jquery.i18n/jquery.i18n.language.js"></script>
+  <script src="jquery.i18n/jquery.i18n.parser.js"></script>
+  <script src="jquery.i18n/jquery.i18n.emitter.js"></script>
+  <script src="jquery.i18n/jquery.i18n.emitter.bidi.js"></script>
+  <script type="text/javascript" src="i18n.js"></script>
 </html>

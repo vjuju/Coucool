@@ -9,7 +9,7 @@ function preloadImages() {
         let link = document.createElement('link');
         let img_nb_str = `${img_nb}`.padStart(5, '0');
         let img_src = `http://vincky.com/coucool/2021/dance_images/dance_${img_nb_str}.jpg`;
-        link.rel = "preload";
+        link.rel = "prefetch";
         link.as = "image";
         link.href = img_src;
         preloadContainer.append(link);
