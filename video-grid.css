@@ -1,6 +1,22 @@
 
 #preload {
-  display:none;
+  display: none;
+}
+
+.sold-out {
+  font-family: 'Personify';
+  font-size: 48px;
+  color: var(--background-color);
+  background: #FFD6AC;
+  padding: 1rem 5rem;
+  border: 1px solid var(--background-color);
+  position: absolute;
+  transform: rotate(-45deg);
+  z-index: 20;
+  bottom: 82px;
+  right: -93px;
+  /*To display when sold out*/
+  display: none;
 }
 
 #ticket {
