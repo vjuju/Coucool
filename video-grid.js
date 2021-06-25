@@ -175,7 +175,7 @@ function launchControls() {
             clearInterval(interval);
             interval = null;
             isPlaying = false;
-            explanations.forEach((explanation) => explanation.style.display = 'block');
+            explanations.forEach((explanation) => explanation.style.display = 'flex');
             //magicImage.style.visibility = 'hidden';
         } else {
             images.forEach((image) => image.addEventListener('click', onImageClick));

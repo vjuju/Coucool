@@ -72,6 +72,11 @@
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row: 1;
+    color: #FFD6AC;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .explanations.card {
