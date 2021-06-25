@@ -4,6 +4,6 @@ const loader = document.getElementById('loader');
 })
 setTimeout(e => {
   loader.style.opacity = 0;
-  setTimeout(e => loader.style.display = 'none', 700);
+  setTimeout(e => loader.style.display = 'none', 100);
 }, 3000)
 
