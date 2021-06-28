@@ -73,10 +73,11 @@
     grid-column-end: 4;
     grid-row: 1;
     color: #FFD6AC;
-    font-size: 35px;
+    font-size: 24px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    padding-right: 1rem;
   }
 
   .explanations.card {
@@ -245,6 +246,11 @@
 
 @media screen and (max-width: 640px) {
 
+  .explanations.black-background {
+    grid-column-end: 6;
+    font-size: 23px;
+  }
+
   .controls {
     left: unset;
     max-width: 95vw;
@@ -296,6 +302,9 @@
 @media screen and (max-width: 356px) {
   #ticket {
     height: calc(100vh - 115px);
+  }
+  .explanations.black-background {
+    font-size: 19px;
   }
 }
 

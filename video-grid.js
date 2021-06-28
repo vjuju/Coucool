@@ -152,8 +152,8 @@ function launchControls() {
     const explanations = document.querySelectorAll('.explanations');
     const playText = "Dansons";
     const pauseText = "Pause";
-    const fwdText = "A L'ENDROIT";
-    const rwdText = "A L'ENVERS";
+    const fwdText = "A l'endoit";
+    const rwdText = "A l'envers";
     //const magicImage = document.querySelector(".magic-image");
     let interval;
     let time = 0;

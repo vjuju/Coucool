@@ -8,7 +8,7 @@ header {
   background: rgb(23,22,18);
 }
 header h1, .header-desktop .dates, .header-mobile h2 {
-  font-size: 20px;
+  font-size: 17px;
   font-family: 'Mantra Alt';
   margin: 0;
   color: rgb(229,203,170);
@@ -18,7 +18,7 @@ header h1, .header-desktop .dates, .header-mobile h2 {
 .header-desktop .dates {
   display: flex;
   align-items: baseline;
-  font-size: 33px;
+  font-size: 26px;
 }
 .coucool {
   font-weight: 800;
