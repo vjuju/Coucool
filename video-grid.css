@@ -295,14 +295,11 @@
     line-height: 40px;
   }
   #ticket {
-    height: calc(100vh - 115px);
+    height: calc(100% - 115px);
   }
 }
 
 @media screen and (max-width: 356px) {
-  #ticket {
-    height: calc(100vh - 115px);
-  }
   .explanations.black-background {
     font-size: 19px;
   }
