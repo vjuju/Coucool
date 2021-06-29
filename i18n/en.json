@@ -19,7 +19,7 @@
   "popup-failure-cta": "Try again",
   "popup-failure-reminder": "Take the time to (re)read our principles before paying your contribution : come, <br>viens, <a href='#engaged' class='switch-menu'>it's this way</a>",
   "popup-almost-title": "ALMOST !",
-  "popup-almost-reminder": "You weren't far off, <a id='almost-link' href='https://www.youtube.com/watch?v=bPOoSUaGZpU'>keep it up.</a>",
+  "popup-almost-reminder": "You weren't far off, <a id='almost-link' href='https://www.youtube.com/watch?v=bPOoSUaGZpU' target='_blank'>keep it up.</a>",
   "home-buttons-dance": "Let's dance",
   "home-buttons-forward": "Forward",
   "menu-engaged-intro": "Dear coucool friends,",
