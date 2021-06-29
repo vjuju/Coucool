@@ -2,7 +2,7 @@ const NB_COLUMNS = 8;
 const NB_ROWS = 3;
 var NB_IMAGES = NB_ROWS * NB_COLUMNS;
 const INTERVAL_MS = 100;
-const colorful_images_numbers = [91, 118, 214, 252, 280]
+const colorful_images_numbers = [46, 91, 118, 214, 252, 280]
 const message_types = ['congratulations']
 var isPlaying = false;
 /*
