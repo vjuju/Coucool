@@ -126,6 +126,7 @@
     background-origin: padding-box, border-box;
     animation: highlight 3s infinite alternate;
     border-radius: 2px;
+    max-width: 340px;
   }
 
   #congrats img {

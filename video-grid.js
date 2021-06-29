@@ -2,7 +2,8 @@ const NB_COLUMNS = 8;
 const NB_ROWS = 3;
 var NB_IMAGES = NB_ROWS * NB_COLUMNS;
 const INTERVAL_MS = 100;
-const colorful_images_numbers = [46, 91, 118, 214, 252, 280]
+const congrats_images_numbers = [252]
+const almost_images_numbers = [46, 91, 118, 214, 280]
 const message_types = ['congratulations']
 var isPlaying = false;
 /*
@@ -110,10 +111,19 @@ function showContributions(){
 function onImageClick(event){
     /*if (colorful_images_numbers.includes(i)) {*/
     const imageClicked = event.target;
-    const imgNb = getImgNumber(imageClicked);
-    if (colorful_images_numbers.includes(imgNb)) {
+    const img_nb = getImgNumber(imageClicked);
+    const img_nb_str = `${img_nb}`.padStart(5, '0');
+    if (congrats_images_numbers.includes(img_nb)) {
+        let congratsImage = document.getElementById("congrats-image");
+        congratsImage.src = `http://vincky.com/coucool/2021/dance_images/dance_${img_nb_str}.jpg`;
         showMessage('congrats');
+    } else if(almost_images_numbers.includes(img_nb)){
+        let almostImage = document.getElementById("almost-image");
+        almostImage.src = `http://vincky.com/coucool/2021/dance_images/dance_${img_nb_str}.jpg`;
+        showMessage('almost');
     } else {
+        let failImage = document.getElementById("fail-image");
+        failImage.src = getRandomFailImage();
         showMessage('bad-timing');
     }
 }
@@ -136,6 +146,16 @@ function hideMessages(){
     const messages = document.querySelectorAll('.message');
     messages.forEach((message) => message.style.visibility = 'hidden');
 }
+
+function getRandomInt(max) {
+    return Math.floor(Math.random()*max)+1;
+  }
+
+function getRandomFailImage() {
+    let randomNumber = getRandomInt(13).toString();
+    return `http://vincky.com/coucool/2021/fail_images/${randomNumber}.jpg`
+}
+  
 
 /*
 
