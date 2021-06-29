@@ -170,7 +170,7 @@ function launchControls() {
         let images = document.querySelectorAll('#video-grid-container img');
         //console.log(images);
         if(isPlaying) {
-            playOrPause.textContent= playText;
+            playOrPause.textContent = document.documentElement.getAttribute('lang') === 'en' ? "Let's dance" : "Dansons"
             images.forEach((image) => image.removeEventListener('click', onImageClick));
             clearInterval(interval);
             interval = null;
@@ -180,7 +180,7 @@ function launchControls() {
         } else {
             images.forEach((image) => image.addEventListener('click', onImageClick));
             /*clickables.forEach((clickable) => clickable.addEventListener('click', showMessage));*/
-            playOrPause.textContent=pauseText;
+            playOrPause.textContent = document.documentElement.getAttribute('lang') === 'en' ? "Freeze" : "Pause"
             //magicImage.style.visibility = 'visible';
             interval = setInterval(playNext, 200);
             isPlaying = true;
@@ -192,15 +192,15 @@ function launchControls() {
     }
 
     function toggleFwdOrRwd() {
-        if (fwdOrRwd.textContent == rwdText) {
-            fwdOrRwd.textContent = fwdText;
+        if ((fwdOrRwd.textContent == "Backward") || (fwdOrRwd.textContent == "A l'envers" )) {
+          fwdOrRwd.textContent = document.documentElement.getAttribute('lang') === 'en' ? "Forward" : "A l'endroit"
         } else {
-            fwdOrRwd.textContent = rwdText;
+          fwdOrRwd.textContent = document.documentElement.getAttribute('lang') === 'en' ? "Backward" : "A l'envers"
         }
     }
 
     function playNext() {
-        if(fwdOrRwd.textContent == rwdText) {
+        if((fwdOrRwd.textContent == "Backward") || (fwdOrRwd.textContent == "A l'envers" )) {
             time = (time == 0) ? NB_IMG : time - 1;
 
             /*

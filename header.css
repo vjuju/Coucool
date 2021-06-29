@@ -23,7 +23,7 @@ header h1, .header-desktop .dates, .header-mobile h2 {
 .coucool {
   font-weight: 800;
   font-family: 'Personify';
-  font-size: 40px;
+  font-size: 30px;
 }
 .header-desktop {
   display: flex;
