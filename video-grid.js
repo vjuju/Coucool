@@ -1,7 +1,7 @@
 const NB_COLUMNS = 8;
 const NB_ROWS = 3;
 var NB_IMAGES = NB_ROWS * NB_COLUMNS;
-const INTERVAL_MS = 100;
+var INTERVAL_MS = 100;
 const congrats_images_numbers = [252]
 const almost_images_numbers = [46, 91, 118, 214, 280]
 const message_types = ['congratulations']
