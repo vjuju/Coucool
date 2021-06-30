@@ -78,7 +78,7 @@
     100%   { transform: rotate(270deg); }
   }
 
-  @media (orientation: landscape) {
+  @media (orientation: landscape) and (max-width: 780px) {
     .orientation-message {
       display:  flex;
     }
