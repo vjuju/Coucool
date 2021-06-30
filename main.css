@@ -36,3 +36,50 @@
     pointer-events: auto;
   }
 
+  .orientation-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: var(--background-color);
+    color: #FFD6AC;
+    font-size: 35px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+    transition: 0.1s ease-out;
+    padding: 1rem;
+  }
+
+  .orientation-message i {
+    animation: rotation 2s infinite;
+    margin-top: 10px;
+    font-size: 50px;
+  }
+
+  @keyframes rotation {
+    0%   { transform: rotate(270deg); }
+    5%   { transform: rotate(280deg); }
+    10%   { transform: rotate(290deg); }
+    15%   { transform: rotate(300deg); }
+    20%   { transform: rotate(310deg); }
+    25%   { transform: rotate(320deg); }
+    30%   { transform: rotate(330deg); }
+    35%   { transform: rotate(340deg); }
+    40%   { transform: rotate(350deg); }
+    50%   { transform: rotate(360deg); }
+    60%   { transform: rotate(360deg); }
+    70%   { transform: rotate(360deg); }
+    80%   { transform: rotate(270deg); }
+    100%   { transform: rotate(270deg); }
+  }
+
+  @media (orientation: landscape) {
+    .orientation-message {
+      display:  flex;
+    }
+  }
