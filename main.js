@@ -12,6 +12,7 @@ $.i18n().load({
   fr: 'i18n/fr.json'
 }).done(() => {
   $('body').i18n();
+  setWeezeventSrc();
   initializeLanguages();
   backToHome();
   switchMenus();
@@ -19,6 +20,12 @@ $.i18n().load({
   initializeAccordions();
   initializeTitles();
 });
+
+const setWeezeventSrc = () => {
+  console.log($.i18n().locale)
+  const locale = $.i18n().locale === 'en' ? 'en-GB' : 'fr-FR'
+  document.querySelector('iframe').src = `https://widget.weezevent.com/ticket/E724948/?code=30127&locale=${locale}&width_auto=1&color_primary=FFD6AC&v=2`
+}
 
 const initializeLanguages = () => {
   document.querySelectorAll('.languages a').forEach(language => {
@@ -87,6 +94,7 @@ const switchLocale = (language, dataLocale) => {
   $.i18n().locale = dataLocale;
   document.documentElement.setAttribute('lang', $.i18n().locale);
   setActive(document.documentElement.getAttribute('lang'));
+  setWeezeventSrc();
   $('body').i18n();
   backToHome();
   switchMenus();

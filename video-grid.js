@@ -9,7 +9,7 @@ let interval_ms = 0;
 
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    document.addEventListener('contextmenu', event => event.preventDefault());
+    // document.addEventListener('contextmenu', event => event.preventDefault());
     setIntervalMs();
     displayImages();
     resizeVideoGridContainer();
