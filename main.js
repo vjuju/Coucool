@@ -22,7 +22,6 @@ $.i18n().load({
 });
 
 const setWeezeventSrc = () => {
-  console.log($.i18n().locale)
   const locale = $.i18n().locale === 'en' ? 'en-GB' : 'fr-FR'
   document.querySelector('iframe').src = `https://widget.weezevent.com/ticket/E724948/?code=30127&locale=${locale}&width_auto=1&color_primary=FFD6AC&v=2`
 }
