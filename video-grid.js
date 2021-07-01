@@ -43,7 +43,7 @@ function setImg(time){
     images.forEach((img) => {
         let img_nb = i >= NB_IMG ? i - NB_IMG : i ;
         let img_nb_str = `${img_nb}`.padStart(5, '0');
-        img.src = `https://vincky.com/coucool/2021/dance_images/dance_${img_nb_str}.jpg`;
+        img.src = `https://cou.cool/dance_images/dance_${img_nb_str}.jpg`;
         if (congrats_images_numbers.includes(img_nb)) {
             img.onclick = onCongratsImageClick;
         } else if(almost_images_numbers.includes(img_nb)){
@@ -73,7 +73,7 @@ function onAlmostImageClick(event){
     const img_nb_str = `${img_nb}`.padStart(5, '0');
     if (isPlaying) {
         let almostImage = document.getElementById("almost-image");
-        almostImage.src = `https://vincky.com/coucool/2021/dance_images/dance_${img_nb_str}.jpg`;
+        almostImage.src = `https://cou.cool/dance_images/dance_${img_nb_str}.jpg`;
         showMessage('almost');
     }
 }
@@ -112,7 +112,7 @@ function getRandomInt(max) {
 
 function getRandomFailImage() {
     let randomNumber = getRandomInt(13).toString();
-    return `https://vincky.com/coucool/2021/fail_images/${randomNumber}.jpg`
+    return `https://cou.cool/fail_images/${randomNumber}.jpg`
 }
 
 function launchControls() {
