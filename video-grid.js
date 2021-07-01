@@ -54,6 +54,7 @@ class VideoPlayer extends HTMLElement {
 
 
 document.addEventListener('DOMContentLoaded', (event) => {
+    document.addEventListener('contextmenu', event => event.preventDefault());
     setIntervalMs();
     displayImages();
     resizeVideoGridContainer();
@@ -148,6 +149,9 @@ function getImgNumber(image) {
 
 
 function showMessage(message_type){
+    if (message_type == 'contributions') {
+      document.getElementById('weezuniq580171').style.display = 'block'
+    }
     const message = document.getElementById(message_type);
     message.style.visibility = 'visible';
 }

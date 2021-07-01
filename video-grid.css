@@ -129,6 +129,10 @@
     max-width: 340px;
   }
 
+  #weezuniq580171 {
+    display: none;
+  }
+
   .message-content a {
     color: #FFD6AC;
     text-decoration: underline;
