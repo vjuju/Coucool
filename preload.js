@@ -1,4 +1,4 @@
-const NB_IMG = 331;
+const NB_IMG = 166;
 
 function preloadImages() {
     const preloadContainer = document.createElement('div');
