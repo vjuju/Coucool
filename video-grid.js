@@ -1,11 +1,11 @@
 const NB_COLUMNS = 8;
 const NB_ROWS = 3;
 var NB_IMAGES = NB_ROWS * NB_COLUMNS;
-var INTERVAL_MS = 100;
 const congrats_images_numbers = [252]
 const almost_images_numbers = [46, 91, 118, 214, 280]
 const message_types = ['congratulations']
 var isPlaying = false;
+let interval_ms = 0;
 /*
 class VideoPlayer extends HTMLElement {
     constructor() {
@@ -54,11 +54,20 @@ class VideoPlayer extends HTMLElement {
 
 
 document.addEventListener('DOMContentLoaded', (event) => {
+    setIntervalMs();
     displayImages();
     resizeVideoGridContainer();
     launchControls();
     setImgSrc(0);
 });
+
+function setIntervalMs() {
+  if (window.innerWidth <= 780) {
+    interval_ms = 300
+  } else {
+    interval_ms = 250
+  }
+}
 
 function displayImages() {
     const gridContainer = document.querySelector('.grid-container');
@@ -79,6 +88,7 @@ function setImgSrc(time){
         let img_nb = i >= NB_IMG ? i - NB_IMG : i ;
         let img_nb_str = `${img_nb}`.padStart(5, '0');
         img.src = `http://vincky.com/coucool/2021/dance_images/dance_${img_nb_str}.jpg`;
+
         /*
         if (true) {
             img.classList.add('clickable');
@@ -202,7 +212,7 @@ function launchControls() {
             /*clickables.forEach((clickable) => clickable.addEventListener('click', showMessage));*/
             playOrPause.textContent = document.documentElement.getAttribute('lang') === 'en' ? "Freeze" : "Pause"
             //magicImage.style.visibility = 'visible';
-            interval = setInterval(playNext, 200);
+            interval = setInterval(playNext, interval_ms);
             isPlaying = true;
             setTimeout(function() {
                 document.querySelectorAll('.explanations').forEach((explanation) => explanation.style.display = 'none')
