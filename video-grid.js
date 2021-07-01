@@ -1,8 +1,8 @@
 const NB_COLUMNS = 8;
 const NB_ROWS = 3;
 var NB_IMAGES = NB_ROWS * NB_COLUMNS;
-const congrats_images_numbers = [252]
-const almost_images_numbers = [46, 91, 118, 214, 280]
+const congrats_images_numbers = [126]
+const almost_images_numbers = [45, 84, 140]
 const message_types = ['congratulations']
 var isPlaying = false;
 let interval_ms = 0;
@@ -65,7 +65,7 @@ function setIntervalMs() {
   if (window.innerWidth <= 780) {
     interval_ms = 300
   } else {
-    interval_ms = 250
+    interval_ms = 500
   }
 }
 
@@ -120,6 +120,7 @@ function showContributions(){
 function onImageClick(event){
     /*if (colorful_images_numbers.includes(i)) {*/
     const imageClicked = event.target;
+    console.log(event.target)
     const img_nb = getImgNumber(imageClicked);
     const img_nb_str = `${img_nb}`.padStart(5, '0');
     if (congrats_images_numbers.includes(img_nb)) {
