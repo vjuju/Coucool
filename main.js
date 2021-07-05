@@ -5,6 +5,7 @@ const menu = document.querySelector('#menu')
 const ticket = document.querySelector('#ticket')
 let interval = null;
 let timeOuts = [];
+let url = new URL(window.location.href);
 const fonts = ['Trash', 'Mantra Alt', 'Harbour', 'Saonara', 'Circular Bold']
 
 $.i18n().load({
@@ -12,6 +13,7 @@ $.i18n().load({
   fr: 'i18n/fr.json'
 }).done(() => {
   $('body').i18n();
+  displayContent(url.hash.substring(1));
   setWeezeventSrc();
   initializeLanguages();
   backToHome();
@@ -23,7 +25,7 @@ $.i18n().load({
 
 const setWeezeventSrc = () => {
   const locale = $.i18n().locale === 'en' ? 'en-GB' : 'fr-FR'
-  document.querySelector('iframe').src = `https://widget.weezevent.com/ticket/E724948/?code=30127&locale=${locale}&width_auto=1&color_primary=FFD6AC&v=2`
+  document.querySelectorAll('iframe').forEach(iFrame => iFrame.src = (`https://widget.weezevent.com/ticket/E724948/?code=30127&locale=${locale}&width_auto=1&color_primary=FFD6AC&v=2` + iFrame.dataset.key));
 }
 
 const initializeLanguages = () => {
@@ -122,21 +124,30 @@ const backToHome = () => {
 const switchMenus = () => {
   document.querySelectorAll('.switch-menu').forEach(link => {
     link.addEventListener('click', e => {
-      titleToDisplay = document.getElementById(link.getAttribute('href').substring(1)).previousElementSibling
-      menuIndex = Array.from(titles).findIndex(title => title === titleToDisplay)
-      otherTitles = Array.from(titles).filter(t => t !== titleToDisplay)
-      if (menu.classList.contains('open')) {
-        resetPositions(titles)
-      } else {
-        menu.classList.add('open');
-        crossToArrow(hamburgers);
-      }
-      setTimeout(e => {
-        translateContent(titleToDisplay.parentNode.querySelector('section'))
-        translateTitles(menuIndex, otherTitles)
-      }, 200)
+      displayContent(link.getAttribute('href').substring(1));
     });
   });
+}
+
+const displayContent = (titleName) => {
+  if (titleName === 'orga') {
+    document.getElementById('weezuniq580172').style.display = 'block'
+    document.getElementById('orga').style.visibility = 'visible';
+  } else if (document.getElementById(titleName) && titleName !== 'menu'){
+    titleToDisplay = document.getElementById(titleName).previousElementSibling
+    menuIndex = Array.from(titles).findIndex(title => title === titleToDisplay)
+    otherTitles = Array.from(titles).filter(t => t !== titleToDisplay)
+    if (menu.classList.contains('open')) {
+      resetPositions(titles)
+    } else {
+      menu.classList.add('open');
+      crossToArrow(hamburgers);
+    }
+    setTimeout(e => {
+      translateContent(titleToDisplay.parentNode.querySelector('section'))
+      translateTitles(menuIndex, otherTitles)
+    }, 200)
+  }
 }
 
 const crossToArrow = (hamburgers) => {

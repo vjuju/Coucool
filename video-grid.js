@@ -6,6 +6,7 @@ const almost_images_numbers = [45, 84, 140]
 const message_types = ['congratulations']
 var isPlaying = false;
 let interval_ms = 0;
+let videoInterval;
 
 
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -94,6 +95,7 @@ function getImgNumber(image) {
 
 
 function showMessage(message_type){
+  pauseVideo(document.querySelector('.playOrPause'), document.querySelectorAll('.explanations'))
     if (message_type == 'contributions') {
       document.getElementById('weezuniq580171').style.display = 'block'
     }
@@ -115,6 +117,17 @@ function getRandomFailImage() {
     return `https://cou.cool/fail_images/${randomNumber}.jpg`
 }
 
+function pauseVideo(playOrPause, explanations) {
+  playOrPause.textContent = document.documentElement.getAttribute('lang') === 'en' ? "Let's dance" : "Dansons"
+  clearInterval(videoInterval);
+  videoInterval = null;
+  isPlaying = false;
+  explanations.forEach((explanation) => {
+    explanation.style.display = 'flex'
+    explanation.classList.remove('hidden')
+  });
+}
+
 function launchControls() {
     const controls = document.querySelector('.controls');
     const playOrPause = document.querySelector('.playOrPause');
@@ -124,7 +137,6 @@ function launchControls() {
     const pauseText = "Pause";
     const fwdText = "A l'endroit";
     const rwdText = "A l'envers";
-    let interval;
     let time = 0;
 
     playOrPause.addEventListener('click', playPauseMedia);
@@ -133,20 +145,16 @@ function launchControls() {
     function playPauseMedia() {
         let images = document.querySelectorAll('#video-grid-container img');
         if(isPlaying) {
-            playOrPause.textContent = document.documentElement.getAttribute('lang') === 'en' ? "Let's dance" : "Dansons"
-            clearInterval(interval);
-            interval = null;
-            isPlaying = false;
-            explanations.forEach((explanation) => explanation.style.display = 'flex');
+            pauseVideo(playOrPause, explanations)
         } else {
             playOrPause.textContent = document.documentElement.getAttribute('lang') === 'en' ? "Freeze" : "Pause"
-            interval = setInterval(playNext, interval_ms);
+            videoInterval = setInterval(playNext, interval_ms);
             isPlaying = true;
             setTimeout(function() {
                 document.querySelectorAll('.explanations').forEach((explanation) => explanation.style.display = 'none')
             }, 500);
+            explanations.forEach((explanation) => explanation.classList.add("hidden"));
         }
-        explanations.forEach((explanation) => explanation.classList.toggle("hidden"));
     }
 
     function toggleFwdOrRwd() {
