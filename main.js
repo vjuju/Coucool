@@ -25,7 +25,7 @@ $.i18n().load({
 
 const setWeezeventSrc = () => {
   const locale = $.i18n().locale === 'en' ? 'en-GB' : 'fr-FR'
-  document.querySelectorAll('iframe').forEach(iFrame => iFrame.src = (`https://widget.weezevent.com/ticket/E724948/?code=30127&locale=${locale}&width_auto=1&color_primary=FFD6AC&v=2` + iFrame.dataset.key));
+  document.querySelectorAll('.weezevent2021').forEach(iFrame => iFrame.src = (`https://widget.weezevent.com/ticket/E724948/?code=30127&locale=${locale}&width_auto=1&color_primary=FFD6AC&v=2` + iFrame.dataset.key));
 }
 
 const initializeLanguages = () => {
