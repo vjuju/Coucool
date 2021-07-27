@@ -1,261 +1,273 @@
-
 #preload {
   display: none;
 }
 
 .sold-out {
-  font-family: 'Personify';
+  font-family: "Personify";
   font-size: 48px;
   color: var(--background-color);
-  background: #FFD6AC;
+  background: #ffd6ac;
   padding: 1rem 5rem;
   border: 1px solid var(--background-color);
   position: absolute;
   transform: rotate(-45deg);
   z-index: 20;
-  bottom: 82px;
-  right: -93px;
+  bottom: 70px;
+  right: -96px;
   /*To display when sold out*/
-  display: none;
+  display: block;
 }
 
 #ticket {
-  position:absolute;
-  width:100%;
+  position: absolute;
+  width: 100%;
   height: calc(100vh - 120px);
   overflow: hidden;
-  display:grid;
+  display: grid;
   justify-items: center;
 }
-  #video-grid-container {
-    position:absolute;
-    background-color: var(--background-color);
-  }
-
-  .grid-container {
-    width:100%;
-    height:100%;
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
-
-  .grid-container img {
-    width: 100%;
-    border-left: solid 3px var(--background-color);
-    border-right: solid 3px var(--background-color);
-    box-sizing: border-box;
-    border-top: solid 4px var(--background-color);
-    border-bottom: solid 4px var(--background-color);
-  }
-
-  .explanations {
-    z-index: 20;
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    -ms-transition: opacity 0.5s ease-in-out;
-    -o-transition: opacity 0.5s ease-in-out;
-    opacity: 1;
-  }
-  
-  .explanations.hidden {
-       opacity: 0;
-  }
-
-  .clickable {
-    cursor: pointer;
-  }
-
-  .explanations.black-background {
-    background-color:var(--background-color);
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row: 1;
-    color: #FFD6AC;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 1rem;
-  }
-
-  .explanations.card {
-    background-color:var(--main-color);
-    color: black;
-    border: solid 3px var(--background-color);
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row: 1;
-    display: grid;
-    place-items: center;
-    font-size: 20px;
-    line-height: 30px;
-    padding: 5px;
-    overflow: hidden;
-  }
-
-  .message {
-    visibility: hidden;
-    width:100%;
-    height: 100%;
-    background-color:var(--background-color-transparent);
-    position: absolute;
-    display:grid;
-    place-items: center;
-    z-index: 20;
-  }
-
-  .message-content {
-    max-width: 1000px;
-    height: 100%;
-    width: 100%;
-    display: flex;
-  }
-
-  .message-content .image-container {
-    flex:1 0 400px;
-    display: grid;
-    place-items: center;
-  }
-  .message-content .image-container img {
-    border: 3px solid transparent;
-    background-repeat: no-repeat;
-    background-size: 100% 100%, 100% 200%;
-    background-position: 0 0, 0 100%;
-    background-origin: padding-box, border-box;
-    animation: highlight 3s infinite alternate;
-    border-radius: 2px;
-    max-width: 340px;
-  }
-
-  iframe {
-    display: none;
-  }
-
-  .message-content a {
-    color: #FFD6AC;
-    text-decoration: underline;
-  }
-
-  #congrats img {
-    background-image: linear-gradient(white, white), linear-gradient(rgb(221, 61, 112), rgb(205, 105, 218) 8.82%, rgb(154, 80, 197) 18.91%, rgb(92, 55, 175) 28.99%, rgb(73, 178, 197) 38.24%, rgb(56, 209, 116) 49.16%, rgb(131, 204, 66) 60.08%, rgb(224, 222, 63) 72.27%, rgb(221, 179, 82) 84.45%, rgb(220, 101, 61) 92.86%, rgb(221, 62, 62));
-  }
-
-  #bad-timing img {
-    background-image: linear-gradient(white, white), linear-gradient(rgb(199, 171, 136), rgb(184, 172, 157) 44.54%, rgb(137, 96, 45) 92.02%);
-  }
-
-
-  @keyframes highlight {
-      100% {
-        background-position: 0 0, 0 0;
-      }
-    }
-
-
-
-  .message-content .text-container {
-    flex:1 0 400px;
-    display: grid;
-    place-items: center;
-    font-size: 24px;
-    color:var(--main-color);
-  }
-
-  .message-content .text-container .switch-menu {
-    color: rgb(229,203,170);
-    text-decoration: underline;
-  }
-
-  .message-content .text-container div{
-    margin:20px 0;
-  }
-
-  .message-content .text-container .congrats-title{
-    font-weight: 800;
-    font-family: 'Personify';
-    font-size: 60px;
-    border-bottom: 2px solid rgb(229,203,170);
-  }
-
-  .message-content .text-container hr{
-    border-color: var(--main-color);
-  }
-
-  .message-content .text-container .button{
-    width: 190px;
-    height: 50px;
-    border: var(--main-color) solid 2px;
-    text-align: center;
-    line-height: 55px;
-    border-radius: 30px;
-    font-size: 18px;
-  }
-
-  .controls {
-    /*visibility: hidden;*/
-    height: 60px;
-    border-radius: 30px;
-    position: absolute;
-    bottom: 60px;
-    left: 60px;
-    background-color:var(--main-color);
-    /*box-shadow: 3px 3px 5px black;*/
-    transition: 1s all;
-    display: flex;
-    line-height: 60px;
-    cursor: pointer;
-    font-size: 20px;
-  }
-  .playOrPause {
-    width: 200px;
-    text-align: center;
-    border: solid 1px var(--main-color);
-    background-color: var(--background-color);
-    color: var(--main-color);
-    border-radius: 30px;
-    padding: 0 20px;
-    content:'Play the dance';
-    transition: border 0.3s;
-  }
-
-  .playOrPause:hover {
-    border: 1px solid black;
-  }
-
-  .fwdOrRwd {
-      width: 200px;
-      text-align: center;
-      transition: 0.5s;
-  }
-
-  .fwdOrRwd:hover {
-    width: 180px;
-  }
-
-.magic-image{
-    visibility: hidden;
-    grid-column: 2;
-    grid-row: 1;
-    background-color: red;
+#video-grid-container {
+  position: absolute;
+  background-color: var(--background-color);
 }
 
+.grid-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.grid-container img {
+  width: 100%;
+  border-left: solid 3px var(--background-color);
+  border-right: solid 3px var(--background-color);
+  box-sizing: border-box;
+  border-top: solid 4px var(--background-color);
+  border-bottom: solid 4px var(--background-color);
+}
+
+.explanations {
+  z-index: 20;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.explanations.hidden {
+  opacity: 0;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.explanations.black-background {
+  background-color: var(--background-color);
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row: 1;
+  color: #ffd6ac;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+
+.explanations.card {
+  background-color: var(--main-color);
+  color: black;
+  border: solid 3px var(--background-color);
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row: 1;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  line-height: 30px;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.message {
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color-transparent);
+  position: absolute;
+  display: grid;
+  place-items: center;
+  z-index: 20;
+}
+
+.message-content {
+  max-width: 1000px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.message-content .image-container {
+  flex: 1 0 400px;
+  display: grid;
+  place-items: center;
+}
+.message-content .image-container img {
+  border: 3px solid transparent;
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 100% 200%;
+  background-position: 0 0, 0 100%;
+  background-origin: padding-box, border-box;
+  animation: highlight 3s infinite alternate;
+  border-radius: 2px;
+  max-width: 340px;
+}
+
+iframe {
+  display: none;
+}
+
+.message-content a {
+  color: #ffd6ac;
+  text-decoration: underline;
+}
+
+#congrats img {
+  background-image: linear-gradient(white, white),
+    linear-gradient(
+      rgb(221, 61, 112),
+      rgb(205, 105, 218) 8.82%,
+      rgb(154, 80, 197) 18.91%,
+      rgb(92, 55, 175) 28.99%,
+      rgb(73, 178, 197) 38.24%,
+      rgb(56, 209, 116) 49.16%,
+      rgb(131, 204, 66) 60.08%,
+      rgb(224, 222, 63) 72.27%,
+      rgb(221, 179, 82) 84.45%,
+      rgb(220, 101, 61) 92.86%,
+      rgb(221, 62, 62)
+    );
+}
+
+#bad-timing img {
+  background-image: linear-gradient(white, white),
+    linear-gradient(
+      rgb(199, 171, 136),
+      rgb(184, 172, 157) 44.54%,
+      rgb(137, 96, 45) 92.02%
+    );
+}
+
+@keyframes highlight {
+  100% {
+    background-position: 0 0, 0 0;
+  }
+}
+
+.message-content .text-container {
+  flex: 1 0 400px;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  color: var(--main-color);
+}
+
+.message-content .text-container .switch-menu {
+  color: rgb(229, 203, 170);
+  text-decoration: underline;
+}
+
+.message-content .text-container div {
+  margin: 20px 0;
+}
+
+.message-content .text-container .congrats-title {
+  font-weight: 800;
+  font-family: "Personify";
+  font-size: 60px;
+  border-bottom: 2px solid rgb(229, 203, 170);
+}
+
+.message-content .text-container hr {
+  border-color: var(--main-color);
+}
+
+.message-content .text-container .button {
+  width: 190px;
+  height: 50px;
+  border: var(--main-color) solid 2px;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 30px;
+  font-size: 18px;
+}
+
+.controls {
+  /*visibility: hidden;*/
+  height: 60px;
+  border-radius: 30px;
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  background-color: var(--main-color);
+  /*box-shadow: 3px 3px 5px black;*/
+  transition: 1s all;
+  display: flex;
+  line-height: 60px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.playOrPause {
+  width: 200px;
+  text-align: center;
+  border: solid 1px var(--main-color);
+  background-color: var(--background-color);
+  color: var(--main-color);
+  border-radius: 30px;
+  padding: 0 20px;
+  content: "Play the dance";
+  transition: border 0.3s;
+}
+
+.playOrPause:hover {
+  border: 1px solid black;
+}
+
+.fwdOrRwd {
+  width: 200px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.fwdOrRwd:hover {
+  width: 180px;
+}
+
+.magic-image {
+  visibility: hidden;
+  grid-column: 2;
+  grid-row: 1;
+  background-color: red;
+}
 
 .overflowing-width {
-    align-self: center;
-    width:calc(2900/1500 * (100vh - 120px));
-    height:calc(100vh - 120px);
+  align-self: center;
+  width: calc(2900 / 1500 * (100vh - 120px));
+  height: calc(100vh - 120px);
 }
 
 .overflowing-height {
-    align-self: top;
-    width:100vw; ;
-    height:calc(1500/2900 * 100vw);
+  align-self: top;
+  width: 100vw;
+  height: calc(1500 / 2900 * 100vw);
 }
 
 @media screen and (max-width: 640px) {
-
   .explanations.black-background {
     grid-column-end: 6;
     font-size: 20px;
@@ -271,14 +283,14 @@
     width: 90%;
     align-items: center;
   }
-  .message-content .text-container div{
+  .message-content .text-container div {
     margin: 0;
   }
   .message-content img {
     height: 35vh;
-
   }
-  .message-content .text-container, .message-content .image-container {
+  .message-content .text-container,
+  .message-content .image-container {
     flex: auto;
     display: block;
     margin-bottom: 4px;
@@ -291,13 +303,13 @@
     font-size: 17px;
   }
 
-  .message-content .text-container .congrats-title{
+  .message-content .text-container .congrats-title {
     font-size: 28px;
     border-bottom: 0;
     margin-bottom: 0.5rem;
   }
 
-  .message-content .text-container .button{
+  .message-content .text-container .button {
     width: 162px;
     height: 37px;
     font-size: 18px;
@@ -329,4 +341,3 @@
     line-height: 43px;
   }
 }
-
