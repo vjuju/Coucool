@@ -14,7 +14,7 @@ $.i18n().load({
 }).done(() => {
   $('body').i18n();
   displayContent(url.hash.substring(1));
-  setWeezeventSrc();
+  // setWeezeventSrc();
   initializeLanguages();
   backToHome();
   switchMenus();
@@ -23,10 +23,10 @@ $.i18n().load({
   initializeTitles();
 });
 
-const setWeezeventSrc = () => {
-  const locale = $.i18n().locale === 'en' ? 'en-GB' : 'fr-FR'
-  document.querySelectorAll('.weezevent2021').forEach(iFrame => iFrame.src = (`https://widget.weezevent.com/ticket/E724948/?code=30127&locale=${locale}&width_auto=1&color_primary=FFD6AC&v=2` + iFrame.dataset.key));
-}
+// const setHelloAssoSrc = () => {
+//   const locale = $.i18n().locale === 'en' ? 'en-GB' : 'fr-FR'
+//   document.querySelectorAll('.haWidget').forEach(iFrame => iFrame.src = (`https://widget.weezevent.com/ticket/E724948/?code=30127&locale=${locale}&width_auto=1&color_primary=FFD6AC&v=2` + iFrame.dataset.key));
+// }
 
 const initializeLanguages = () => {
   document.querySelectorAll('.languages a').forEach(language => {
@@ -95,7 +95,7 @@ const switchLocale = (language, dataLocale) => {
   $.i18n().locale = dataLocale;
   document.documentElement.setAttribute('lang', $.i18n().locale);
   setActive(document.documentElement.getAttribute('lang'));
-  setWeezeventSrc();
+  setHelloAssoSrc();
   $('body').i18n();
   backToHome();
   switchMenus();
@@ -131,7 +131,7 @@ const switchMenus = () => {
 
 const displayContent = (titleName) => {
   if (titleName === 'orga') {
-    document.getElementById('weezuniq580172').style.display = 'block'
+    document.getElementById('haWidget2').style.display = 'block'
     document.getElementById('orga').style.visibility = 'visible';
   } else if (document.getElementById(titleName) && titleName !== 'menu'){
     titleToDisplay = document.getElementById(titleName).previousElementSibling

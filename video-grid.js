@@ -97,7 +97,7 @@ function getImgNumber(image) {
 function showMessage(message_type){
   pauseVideo(document.querySelector('.playOrPause'), document.querySelectorAll('.explanations'))
     if (message_type == 'contributions') {
-      document.getElementById('weezuniq580171').style.display = 'block'
+      document.getElementById('haWidget1').style.display = 'block'
     }
     const message = document.getElementById(message_type);
     message.style.visibility = 'visible';
