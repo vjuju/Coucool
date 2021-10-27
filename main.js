@@ -14,7 +14,7 @@ $.i18n().load({
 }).done(() => {
   $('body').i18n();
   displayContent(url.hash.substring(1));
-  // setWeezeventSrc();
+  setWeezeventSrc();
   initializeLanguages();
   backToHome();
   switchMenus();
@@ -23,10 +23,11 @@ $.i18n().load({
   initializeTitles();
 });
 
-// const setHelloAssoSrc = () => {
-//   const locale = $.i18n().locale === 'en' ? 'en-GB' : 'fr-FR'
-//   document.querySelectorAll('.haWidget').forEach(iFrame => iFrame.src = (`https://widget.weezevent.com/ticket/E724948/?code=30127&locale=${locale}&width_auto=1&color_primary=FFD6AC&v=2` + iFrame.dataset.key));
-// }
+const setWeezeventSrc = () => {
+   const locale = $.i18n().locale === 'en' ? 'en-GB' : 'fr-FR'
+   const iframe = document.querySelector('.weezevent2021')
+   iframe.src = (`https://widget.weezevent.com/ticket/E771096/?code=36089&locale=${locale}&width_auto=1&color_primary=FFD6AC&v=2` + iframe.dataset.key);
+ }
 
 const initializeLanguages = () => {
   document.querySelectorAll('.languages a').forEach(language => {
@@ -130,10 +131,7 @@ const switchMenus = () => {
 }
 
 const displayContent = (titleName) => {
-  if (titleName === 'orga') {
-    document.getElementById('haWidget2').style.display = 'block'
-    document.getElementById('orga').style.visibility = 'visible';
-  } else if (document.getElementById(titleName) && titleName !== 'menu'){
+  if (document.getElementById(titleName) && titleName !== 'menu'){
     titleToDisplay = document.getElementById(titleName).previousElementSibling
     menuIndex = Array.from(titles).findIndex(title => title === titleToDisplay)
     otherTitles = Array.from(titles).filter(t => t !== titleToDisplay)

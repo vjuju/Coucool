@@ -48,9 +48,9 @@ function setImg(time){
         if (congrats_images_numbers.includes(img_nb)) {
             img.onclick = onCongratsImageClick;
         } else if(almost_images_numbers.includes(img_nb)){
-            img.onclick = onAlmostImageClick;
+            img.onclick = onCongratsImageClick;
         } else {
-            img.onclick = onFailImageClick;
+            img.onclick = onCongratsImageClick;
         }
         i++;
     })
@@ -97,7 +97,7 @@ function getImgNumber(image) {
 function showMessage(message_type){
   pauseVideo(document.querySelector('.playOrPause'), document.querySelectorAll('.explanations'))
     if (message_type == 'contributions') {
-      document.getElementById('haWidget1').style.display = 'block'
+      document.getElementById('weezuniq580171').style.display = 'block'
     }
     const message = document.getElementById(message_type);
     message.style.visibility = 'visible';
