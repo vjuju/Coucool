@@ -5,13 +5,15 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: rgb(23,22,18);
+  background: rgb(23, 22, 18);
 }
-header h1, .header-desktop .dates, .header-mobile h2 {
+header h1,
+.header-desktop .dates,
+.header-mobile h2 {
   font-size: 17px;
-  font-family: 'Mantra Alt';
+  font-family: "Mantra Alt";
   margin: 0;
-  color: rgb(229,203,170);
+  color: rgb(229, 203, 171);
   font-weight: 200;
   line-height: 30px;
 }
@@ -22,14 +24,14 @@ header h1, .header-desktop .dates, .header-mobile h2 {
 }
 .coucool {
   font-weight: 800;
-  font-family: 'Personify';
+  font-family: "Personify";
   font-size: 37px;
 }
 .header-desktop {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  border-bottom: 1px solid rgb(229,203,170);
+  border-bottom: 1px solid rgb(229, 203, 170);
 }
 .header-mobile {
   display: none;
@@ -47,15 +49,16 @@ header h1, .header-desktop .dates, .header-mobile h2 {
 
 .hamburger.cross .top {
   transform: translateY(11px) translateX(0) rotate(45deg);
-  background: #FFD6AC;
+  background: #ffd6ac;
 }
-.hamburger.cross .middle, .hamburger.arrow .middle {
+.hamburger.cross .middle,
+.hamburger.arrow .middle {
   opacity: 0;
-  background: #FFD6AC;
+  background: #ffd6ac;
 }
 .hamburger.cross .bottom {
   transform: translateY(-11px) translateX(0) rotate(-45deg);
-  background: #FFD6AC;
+  background: #ffd6ac;
 }
 .hamburger.arrow .top {
   transform: translateY(11px) translateX(0) rotate(-35deg) scale(1);
@@ -64,7 +67,7 @@ header h1, .header-desktop .dates, .header-mobile h2 {
   transform: translateY(7.5px) translateX(0) rotate(35deg) scale(1);
 }
 .hamburger span {
-  background: #FFD6AC;
+  background: #ffd6ac;
   height: 4px;
   width: 100%;
   position: absolute;
@@ -83,7 +86,9 @@ header h1, .header-desktop .dates, .header-mobile h2 {
   header {
     padding: 0 1rem;
   }
-  .header-desktop h1, .header-desktop .dates, .header-mobile h2 {
+  .header-desktop h1,
+  .header-desktop .dates,
+  .header-mobile h2 {
     font-size: 15px;
   }
   .header-desktop .dates {
@@ -106,11 +111,11 @@ header h1, .header-desktop .dates, .header-mobile h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid rgb(229,203,170);
+    border-bottom: 1px solid rgb(229, 203, 170);
   }
   .header-mobile h1 {
     font-weight: 800;
-    font-family: 'Personify';
+    font-family: "Personify";
     font-size: 45px;
     line-height: unset;
   }
