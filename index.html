@@ -1,100 +1,65 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, user-scalable=no" />
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="main.css" />
-    <link rel="stylesheet" type="text/css" href="fonts.css" />
-    <link rel="stylesheet" type="text/css" href="video-grid.css" />
-    <link rel="stylesheet" type="text/css" href="header.css" />
-    <link rel="stylesheet" type="text/css" href="menu.css" />
-    <link rel="stylesheet" type="text/css" href="overlay.css" />
-    <link rel="stylesheet" type="text/css" href="loader.css" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3.0, user-scalable=yes"
-    />
-    <title>Coucool 2021</title>
-    <meta
-      name="description"
-      content="Coucool est un rassemblement artistique et bienveillant, mis en fête par Éros Sélavy /
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="main.css" />
+  <link rel="stylesheet" type="text/css" href="fonts.css" />
+  <link rel="stylesheet" type="text/css" href="video-grid.css" />
+  <link rel="stylesheet" type="text/css" href="header.css" />
+  <link rel="stylesheet" type="text/css" href="menu.css" />
+  <link rel="stylesheet" type="text/css" href="overlay.css" />
+  <link rel="stylesheet" type="text/css" href="loader.css" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3.0, user-scalable=yes" />
+  <title>Coucool 2021</title>
+  <meta name="description" content="Coucool est un rassemblement artistique et bienveillant, mis en fête par Éros Sélavy /
     Coucool is an artistic and benevolent celebration, hosted by Éros Sélavy
-    "
-    />
-    <meta name="author" content="Eros Selavy" />
-    <meta property="og:title" content="COUCOOL" />
-    <meta property="og:site_name" content="COUCOOL" />
-    <meta property="og:url" content="https://www.cou.cool" />
-    <meta
-      property="og:description"
-      content="Rassemblement artistique et bienveillant, mis en fête par Éros Sélavy /
-    Artistic and benevolent celebration, hosted by Éros Sélavy"
-    />
-    <meta property="og:image" content="https://www.cou.cool/social.png" />
-    <meta name="application-name" content="COUCOOL" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/favicons/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="/favicons/safari-pinned-tab.svg"
-      color="#e5cbaa"
-    />
-    <link rel="shortcut icon" href="/favicons/favicon.ico" />
-    <meta name="msapplication-TileColor" content="#00aba9" />
-    <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
-    <meta name="theme-color" content="#ffffff" />
-  </head>
-  <body>
-    <div id="loader" data-i18n="loader-text"></div>
-    <header>
-      <div class="orientation-message" data-i18n="[html]home-orientation"></div>
-      <div class="header-desktop">
-        <h1 data-i18n="[html]home-subline"></h1>
-        <h2 class="dates">
-          <span
-            data-i18n="home-dates-desktop"
-            style="text-decoration: line-through"
-          ></span
-          ><a class="hamburger" href="#menu"
-            ><span class="top"></span><span class="middle"></span
-            ><span class="bottom"></span
-          ></a>
-        </h2>
+    " />
+  <meta name="author" content="Eros Selavy" />
+  <meta property="og:title" content="COUCOOL" />
+  <meta property="og:site_name" content="COUCOOL" />
+  <meta property="og:url" content="https://www.cou.cool" />
+  <meta property="og:description" content="Rassemblement artistique et bienveillant, mis en fête par Éros Sélavy /
+    Artistic and benevolent celebration, hosted by Éros Sélavy" />
+  <meta property="og:image" content="https://www.cou.cool/social.png" />
+  <meta name="application-name" content="COUCOOL" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+  <link rel="manifest" href="/favicons/site.webmanifest" />
+  <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#e5cbaa" />
+  <link rel="shortcut icon" href="/favicons/favicon.ico" />
+  <meta name="msapplication-TileColor" content="#00aba9" />
+  <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
+  <meta name="theme-color" content="#ffffff" />
+</head>
+
+<body>
+  <div id="loader" data-i18n="loader-text"></div>
+  <header>
+    <div class="orientation-message" data-i18n="[html]home-orientation"></div>
+    <div class="header-desktop">
+      <h1 data-i18n="[html]home-subline"></h1>
+      <h2 class="dates">
+        <span data-i18n="home-dates-desktop" style="text-decoration: line-through"></span><a class="hamburger"
+          href="#menu"><span class="top"></span><span class="middle"></span><span class="bottom"></span></a>
+      </h2>
+    </div>
+    <div class="header-mobile">
+      <div class="top-part">
+        <h1 class="coucool">COUCOOL</h1>
+        <a class="hamburger" href="#menu"><span class="top"></span><span class="middle"></span><span
+            class="bottom"></span></a>
       </div>
-      <div class="header-mobile">
-        <div class="top-part">
-          <h1 class="coucool">COUCOOL</h1>
-          <a class="hamburger" href="#menu"
-            ><span class="top"></span><span class="middle"></span
-            ><span class="bottom"></span
-          ></a>
-        </div>
-        <h2
-          data-i18n="home-dates-mobile"
-          style="text-decoration: line-through"
-        ></h2>
-      </div>
-    </header>
-    <main>
-      <div class="panel" id="ticket">
-        <div id="video-grid-container" class="overflowing-height">
-          <!--
+      <h2 data-i18n="home-dates-mobile" style="text-decoration: line-through"></h2>
+    </div>
+  </header>
+  <main>
+    <div class="panel" id="ticket">
+      <div id="video-grid-container" class="overflowing-height">
+        <!--
           <div class="video-container" style="width:100%; height:100%; background-color:grey; position: absolute;">
             <video controls style="height: 100%; width: 100%;">
               <source src="https://client.adequa.me/coucool/matrice_dance.mp4" type="video/mp4">
@@ -102,430 +67,313 @@
             </video>
           </div>
           -->
-          <div class="grid-container">
-            <div class="explanations black-background">
-              <div data-i18n="[html]home-instructions"></div>
-            </div>
+        <div class="grid-container">
+          <div class="explanations black-background">
+            <div data-i18n="[html]home-instructions"></div>
           </div>
-        </div>
-        <div class="message" id="congrats">
-          <div class="message-content">
-            <div class="image-container">
-              <img
-                id="congrats-image"
-                src="https://cou.cool/dance_images/dance_00126.jpg"
-              />
-            </div>
-            <div class="text-container">
-              <div class="text-content">
-                <div
-                  class="congrats-title"
-                  data-i18n="popup-congrats-title"
-                ></div>
-                <div data-i18n="popup-congrats-subline"></div>
-                <div
-                  class="button"
-                  onclick="showContributions()"
-                  data-i18n="popup-congrats-cta"
-                ></div>
-                <div data-i18n="[html]popup-congrats-reminder"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="message" id="contributions" onclick="hideMessages()">
-
-          <iframe
-            id="weezuniq580171"
-            class="weezevent2021"
-            resize="0"
-            height="100%"
-            width="100%"
-            hidepoweredby="0"
-            data-key
-            frameborder="0"
-            allowfullscreen="true"
-            scrolling="auto"
-            style="box-sizing: initial"
-          >
-          </iframe>
-        </div>
-        <div class="message" id="bad-timing" onclick="hideMessages()">
-          <div class="message-content">
-            <div class="image-container">
-              <img id="fail-image" />
-            </div>
-            <div class="text-container">
-              <div class="text-content">
-                <div
-                  class="congrats-title"
-                  data-i18n="popup-failure-title"
-                ></div>
-                <div data-i18n="popup-failure-subline"></div>
-                <div
-                  class="button"
-                  onclick="hideMessages()"
-                  data-i18n="popup-failure-cta"
-                ></div>
-                <div data-i18n="[html]popup-failure-reminder"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="message" id="almost" onclick="hideMessages()">
-          <div class="message-content">
-            <div class="image-container">
-              <img
-                id="almost-image"
-                src="https://cou.cool/dance_images/dance_00091.jpg"
-              />
-            </div>
-            <div class="text-container">
-              <div class="text-content">
-                <div
-                  class="congrats-title"
-                  data-i18n="popup-almost-title"
-                ></div>
-                <div data-i18n="[html]popup-almost-reminder"></div>
-                <div
-                  class="button"
-                  onclick="hideMessages()"
-                  data-i18n="popup-almost-cta"
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="controls">
-          <div class="playOrPause" data-i18n="home-buttons-dance"></div>
-          <div class="fwdOrRwd" data-i18n="home-buttons-forward"></div>
         </div>
       </div>
-      <!--
+      <div class="message" id="congrats">
+        <div class="message-content">
+          <div class="image-container">
+            <img id="congrats-image" src="https://cou.cool/dance_images/dance_00126.jpg" />
+          </div>
+          <div class="text-container">
+            <div class="text-content">
+              <div class="congrats-title" data-i18n="popup-congrats-title"></div>
+              <div data-i18n="popup-congrats-subline"></div>
+              <div class="button" onclick="showContributions()" data-i18n="popup-congrats-cta"></div>
+              <div data-i18n="[html]popup-congrats-reminder"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="message" id="contributions" onclick="hideMessages()">
+
+        <iframe id="haWidget1" allowtransparency="true" scrolling="auto"
+          src="https://www.helloasso.com/associations/coucool/adhesions/coucool-adhesion-2022/widget"
+          style="width:100%;height:750px;border:none;" onload="window.scroll(0, this.offsetTop)"></iframe>
+        <!-- <iframe
+                       id="weezuniq580171"
+                       class="weezevent2021"
+                       resize="0"
+           @@ -148,24 +148,7 @@ <h1 class="coucool">COUCOOL</h1>
+                       scrolling="auto"
+                       style="box-sizing: initial"
+                     >
+                     </iframe> -->
+      </div>
+      <div class="message" id="orga">
+        <iframe id="haWidget2" allowtransparency="true" scrolling="auto"
+          src="https://www.helloasso.com/associations/coucool/adhesions/coucool-adhesion-2022/widget"
+          style="width:100%;height:750px;border:none;" onload="window.scroll(0, this.offsetTop)"></iframe>
+        <!--   <iframe
+                       id="weezuniq580172"
+                       class="weezevent2021"
+                       resize="0"
+                       height="100%"
+                       width="100%"
+                       hidepoweredby="0"
+                       data-key="&widget_key=3ddb922a-56ac-4e25-8b06-ea0ab3dc4f02"
+                       data-frameborder="0"
+                       allowfullscreen="true"
+                       scrolling="auto"
+                       style="box-sizing: initial"
+                     >
+                     </iframe> -->
+      </div>
+      <div class="message" id="bad-timing" onclick="hideMessages()">
+        <div class="message-content">
+          <div class="image-container">
+            <img id="fail-image" />
+          </div>
+          <div class="text-container">
+            <div class="text-content">
+              <div class="congrats-title" data-i18n="popup-failure-title"></div>
+              <div data-i18n="popup-failure-subline"></div>
+              <div class="button" onclick="hideMessages()" data-i18n="popup-failure-cta"></div>
+              <div data-i18n="[html]popup-failure-reminder"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="message" id="almost" onclick="hideMessages()">
+        <div class="message-content">
+          <div class="image-container">
+            <img id="almost-image" src="https://cou.cool/dance_images/dance_00091.jpg" />
+          </div>
+          <div class="text-container">
+            <div class="text-content">
+              <div class="congrats-title" data-i18n="popup-almost-title"></div>
+              <div data-i18n="[html]popup-almost-reminder"></div>
+              <div class="button" onclick="hideMessages()" data-i18n="popup-almost-cta"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="playOrPause" data-i18n="home-buttons-dance"></div>
+        <div class="fwdOrRwd" data-i18n="home-buttons-forward"></div>
+      </div>
+    </div>
+    <!--
       Menu Overlay
       -->
-      <div class="overlay" id="menu">
-        <nav class="menu-window">
-          <div class="menu-left">
-            <span></span>
-            <div class="menu-contact">
-              <h3 data-i18n="[html]menu-subline"></h3>
-              <br />
-              <div class="links">
-                <a
-                  id="mail"
-                  href="mailto:eros@cou.cool"
-                  data-i18n="menu-cta-contact"
-                ></a>
-                <a
-                  href="https://www.facebook.com/coucoolcoucool/"
-                  target="_blank"
-                >
-                  <i class="fab fa-facebook-square"></i>
+    <div class="overlay" id="menu">
+      <nav class="menu-window">
+        <div class="menu-left">
+          <span></span>
+          <div class="menu-contact">
+            <h3 data-i18n="[html]menu-subline"></h3>
+            <br />
+            <div class="links">
+              <a id="mail" href="mailto:eros@cou.cool" data-i18n="menu-cta-contact"></a>
+              <a href="https://www.facebook.com/coucoolcoucool/" target="_blank">
+                <i class="fab fa-facebook-square"></i>
+              </a>
+              <a href="https://www.instagram.com/coucool_eros_selavy" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <span class="languages"><a href="#fr" data-locale="fr">Fr</a> -
+            <a href="#en" data-locale="en">En</a></span>
+        </div>
+        <div class="menu-right">
+          <div class="engaged subpart">
+            <a href="#engage.e" id="title-engaged" class="title" data-i18n="menu-title-engaged"></a>
+            <section id="engage.e">
+              <p data-i18n="menu-engaged-intro"></p>
+              <p data-i18n="[html]menu-engaged-subline"></p>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-principles-1-title"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-principles-1-content"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-principles-2-title"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-principles-2-content"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-principles-3-title"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-principles-3-content"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-principles-4-title"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-principles-4-content"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-principles-5-title"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-principles-5-content"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-principles-6-title"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-principles-6-content"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-principles-7-title"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-principles-7-content"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-principles-8-title"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-principles-8-content"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-principles-9-title"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-principles-9-content"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-principles-10-title"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-principles-10-content"></ul>
+              </div>
+              <p class="fr" data-i18n="[html]menu-engaged-donations"></p>
+              <p class="fr" data-i18n="menu-engaged-conclusion"></p>
+              <p class="eros last-text-section" style="text-align: left">
+                Éros Sélavy
+              </p>
+            </section>
+          </div>
+          <div class="useful subpart">
+            <a href="#utilitaire" id="title-useful" class="title" data-i18n="menu-title-utility"></a>
+            <section id="utilitaire">
+              <p data-i18n="menu-useful-subline"></p>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-useful-1-question"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-useful-1-answer"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-useful-2-question"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-useful-2-answer"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-useful-3-question"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-useful-3-answer"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-useful-4-question"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-useful-4-answer"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-useful-5-question"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-useful-5-answer"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-useful-6-question"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-useful-6-answer"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-useful-7-question">?</h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-useful-7-answer"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-useful-8-question"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-useful-8-answer"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-useful-9-question"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-useful-9-answer"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-useful-10-question"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-useful-10-answer"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-useful-11-question"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-useful-11-answer"></ul>
+              </div>
+              <div class="accordion-item">
+                <h4 data-i18n="menu-useful-12-question"></h4>
+                <ul class="accordion-item-content" data-i18n="[html]menu-useful-12-answer"></ul>
+              </div>
+            </section>
+          </div>
+          <div class="curious subpart">
+            <a href="#curieux.se" id="title-curious" class="title" data-i18n="menu-title-curious"></a>
+            <section id="curieux.se">
+              <h4 data-i18n="menu-curious-why"></h4>
+              <p data-i18n="menu-curious-subline"></p>
+              <h4 data-i18n="menu-curious-fondamentals"></h4>
+              <ul class="foundations" data-i18n="[html]menu-curious-foundations"></ul>
+              <h4 data-i18n="menu-curious-definitions-title"></h4>
+              <p data-i18n="[html]menu-curious-definitions-content-1"></p>
+              <p data-i18n="menu-curious-definitions-content-2"></p>
+              <p data-i18n="[html]menu-curious-definitions-content-3"></p>
+              <ol class="definitions last-text-section" data-i18n="[html]menu-curious-definitions-last-section"></ol>
+            </section>
+          </div>
+          <div class="nostalgy subpart">
+            <a href="#nostalgique" id="title-nostalgy" class="title" data-i18n="menu-title-nostalgic"></a>
+            <section id="nostalgique">
+              <h3 data-i18n="[html]menu-nostalgy-subline"></h3>
+              <h3 data-i18n="[html]menu-nostalgy-subline-author"></h3>
+              <div class="site">
+                <span class="year"><strong>2020</strong></span>
+                <a href="https://www.cou.cool/2020" target="_blank">
+                  <span data-i18n="[html]menu-nostalgy-website"></span>
                 </a>
-                <a
-                  href="https://www.instagram.com/coucool_eros_selavy"
-                  target="_blank"
-                >
-                  <i class="fab fa-instagram"></i>
+                <a href="https://www.cou.cool/comptes/2020/" target="_blank">
+                  <span data-i18n="[html]menu-nostalgy-activity"></span>
                 </a>
               </div>
-            </div>
-            <span class="languages"
-              ><a href="#fr" data-locale="fr">Fr</a> -
-              <a href="#en" data-locale="en">En</a></span
-            >
+              <div class="site">
+                <span class="year"><strong>2019</strong></span>
+                <a href="https://www.cou.cool/2019/" target="_blank">
+                  <span data-i18n="[html]menu-nostalgy-website"></span>
+                </a>
+                <a href="https://www.cou.cool/comptes/2019/" target="_blank">
+                  <span data-i18n="[html]menu-nostalgy-activity"></span>
+                </a>
+              </div>
+              <div class="site">
+                <span class="year"><strong>2018</strong></span>
+                <a href="https://www.cou.cool/2018/" target="_blank">
+                  <span data-i18n="[html]menu-nostalgy-website"></span>
+                </a>
+                <a href="https://www.cou.cool/comptes/2018/" target="_blank">
+                  <span data-i18n="[html]menu-nostalgy-activity"></span>
+                </a>
+              </div>
+              <div class="site">
+                <span class="year"><strong>2017</strong></span>
+                <a href="https://www.cou.cool/2017/" target="_blank">
+                  <span data-i18n="[html]menu-nostalgy-website"></span>
+                </a>
+                <a href="https://www.cou.cool/comptes/2017/" target="_blank">
+                  <span data-i18n="[html]menu-nostalgy-activity"></span>
+                </a>
+              </div>
+              <div class="site last-text-section">
+                <span class="year"><strong>2016</strong></span>
+                <a href="https://www.cou.cool/2016/" target="_blank">
+                  <span data-i18n="[html]menu-nostalgy-website"></span>
+                </a>
+                <a href="#" target="_blank" class="disabled">
+                  <span data-i18n="[html]menu-nostalgy-activity"></span>
+                </a>
+              </div>
+            </section>
           </div>
-          <div class="menu-right">
-            <div class="engaged subpart">
-              <a
-                href="#engage.e"
-                id="title-engaged"
-                class="title"
-                data-i18n="menu-title-engaged"
-              ></a>
-              <section id="engage.e">
-                <p data-i18n="menu-engaged-intro"></p>
-                <p data-i18n="[html]menu-engaged-subline"></p>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-principles-1-title"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-principles-1-content"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-principles-2-title"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-principles-2-content"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-principles-3-title"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-principles-3-content"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-principles-4-title"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-principles-4-content"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-principles-5-title"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-principles-5-content"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-principles-6-title"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-principles-6-content"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-principles-7-title"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-principles-7-content"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-principles-8-title"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-principles-8-content"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-principles-9-title"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-principles-9-content"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-principles-10-title"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-principles-10-content"
-                  ></ul>
-                </div>
-                <p class="fr" data-i18n="[html]menu-engaged-donations"></p>
-                <p class="fr" data-i18n="menu-engaged-conclusion"></p>
-                <p class="eros last-text-section" style="text-align: left">
-                  Éros Sélavy
-                </p>
-              </section>
-            </div>
-            <div class="useful subpart">
-              <a
-                href="#utilitaire"
-                id="title-useful"
-                class="title"
-                data-i18n="menu-title-utility"
-              ></a>
-              <section id="utilitaire">
-                <p data-i18n="menu-useful-subline"></p>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-useful-1-question"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-useful-1-answer"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-useful-2-question"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-useful-2-answer"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-useful-3-question"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-useful-3-answer"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-useful-4-question"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-useful-4-answer"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-useful-5-question"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-useful-5-answer"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-useful-6-question"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-useful-6-answer"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-useful-7-question">?</h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-useful-7-answer"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-useful-8-question"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-useful-8-answer"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-useful-9-question"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-useful-9-answer"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-useful-10-question"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-useful-10-answer"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-useful-11-question"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-useful-11-answer"
-                  ></ul>
-                </div>
-                <div class="accordion-item">
-                  <h4 data-i18n="menu-useful-12-question"></h4>
-                  <ul
-                    class="accordion-item-content"
-                    data-i18n="[html]menu-useful-12-answer"
-                  ></ul>
-                </div>
-              </section>
-            </div>
-            <div class="curious subpart">
-              <a
-                href="#curieux.se"
-                id="title-curious"
-                class="title"
-                data-i18n="menu-title-curious"
-              ></a>
-              <section id="curieux.se">
-                <h4 data-i18n="menu-curious-why"></h4>
-                <p data-i18n="menu-curious-subline"></p>
-                <h4 data-i18n="menu-curious-fondamentals"></h4>
-                <ul
-                  class="foundations"
-                  data-i18n="[html]menu-curious-foundations"
-                ></ul>
-                <h4 data-i18n="menu-curious-definitions-title"></h4>
-                <p data-i18n="[html]menu-curious-definitions-content-1"></p>
-                <p data-i18n="menu-curious-definitions-content-2"></p>
-                <p data-i18n="[html]menu-curious-definitions-content-3"></p>
-                <ol
-                  class="definitions last-text-section"
-                  data-i18n="[html]menu-curious-definitions-last-section"
-                ></ol>
-              </section>
-            </div>
-            <div class="nostalgy subpart">
-              <a
-                href="#nostalgique"
-                id="title-nostalgy"
-                class="title"
-                data-i18n="menu-title-nostalgic"
-              ></a>
-              <section id="nostalgique">
-                <h3 data-i18n="[html]menu-nostalgy-subline"></h3>
-                <h3 data-i18n="[html]menu-nostalgy-subline-author"></h3>
-                <div class="site">
-                  <span class="year"><strong>2020</strong></span>
-                  <a href="https://www.cou.cool/2020" target="_blank">
-                    <span data-i18n="[html]menu-nostalgy-website"></span>
-                  </a>
-                  <a href="https://www.cou.cool/comptes/2020/" target="_blank">
-                    <span data-i18n="[html]menu-nostalgy-activity"></span>
-                  </a>
-                </div>
-                <div class="site">
-                  <span class="year"><strong>2019</strong></span>
-                  <a href="https://www.cou.cool/2019/" target="_blank">
-                    <span data-i18n="[html]menu-nostalgy-website"></span>
-                  </a>
-                  <a href="https://www.cou.cool/comptes/2019/" target="_blank">
-                    <span data-i18n="[html]menu-nostalgy-activity"></span>
-                  </a>
-                </div>
-                <div class="site">
-                  <span class="year"><strong>2018</strong></span>
-                  <a href="https://www.cou.cool/2018/" target="_blank">
-                    <span data-i18n="[html]menu-nostalgy-website"></span>
-                  </a>
-                  <a href="https://www.cou.cool/comptes/2018/" target="_blank">
-                    <span data-i18n="[html]menu-nostalgy-activity"></span>
-                  </a>
-                </div>
-                <div class="site">
-                  <span class="year"><strong>2017</strong></span>
-                  <a href="https://www.cou.cool/2017/" target="_blank">
-                    <span data-i18n="[html]menu-nostalgy-website"></span>
-                  </a>
-                  <a href="https://www.cou.cool/comptes/2017/" target="_blank">
-                    <span data-i18n="[html]menu-nostalgy-activity"></span>
-                  </a>
-                </div>
-                <div class="site last-text-section">
-                  <span class="year"><strong>2016</strong></span>
-                  <a href="https://www.cou.cool/2016/" target="_blank">
-                    <span data-i18n="[html]menu-nostalgy-website"></span>
-                  </a>
-                  <a href="#" target="_blank" class="disabled">
-                    <span data-i18n="[html]menu-nostalgy-activity"></span>
-                  </a>
-                </div>
-              </section>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </main>
-  </body>
-  <script type="text/javascript" src="preload.js"></script>
-  <script type="text/javascript" src="video-grid.js"></script>
-  <script
-    src="https://kit.fontawesome.com/9b77b2a18b.js"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"
-  ></script>
-  <script src="jquery.i18n/CLDRPluralRuleParser.js"></script>
-  <script src="jquery.i18n/jquery.i18n.js"></script>
-  <script src="jquery.i18n/jquery.i18n.messagestore.js"></script>
-  <script src="jquery.i18n/jquery.i18n.fallbacks.js"></script>
-  <script src="jquery.i18n/jquery.i18n.language.js"></script>
-  <script src="jquery.i18n/jquery.i18n.parser.js"></script>
-  <script src="jquery.i18n/jquery.i18n.emitter.js"></script>
-  <script src="jquery.i18n/jquery.i18n.emitter.bidi.js"></script>
-  <script type="text/javascript" src="main.js"></script>
-  <script type="text/javascript" src="loader.js"></script>
+        </div>
+      </nav>
+    </div>
+    <a href="https://www.helloasso.com/associations/coucool/adhesions/coucool-adhesion-2022" target="_blank"
+      class="sold-out" data-i18n="join"></a>
+  </main>
+</body>
+<script type="text/javascript" src="preload.js"></script>
+<script type="text/javascript" src="video-grid.js"></script>
+<script src="https://kit.fontawesome.com/9b77b2a18b.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="jquery.i18n/CLDRPluralRuleParser.js"></script>
+<script src="jquery.i18n/jquery.i18n.js"></script>
+<script src="jquery.i18n/jquery.i18n.messagestore.js"></script>
+<script src="jquery.i18n/jquery.i18n.fallbacks.js"></script>
+<script src="jquery.i18n/jquery.i18n.language.js"></script>
+<script src="jquery.i18n/jquery.i18n.parser.js"></script>
+<script src="jquery.i18n/jquery.i18n.emitter.js"></script>
+<script src="jquery.i18n/jquery.i18n.emitter.bidi.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="loader.js"></script>
+
 </html>
