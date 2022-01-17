@@ -4,7 +4,7 @@
 
 .sold-out {
   font-family: "Personify";
-  font-size: 48px;
+  font-size: 37px;
   color: var(--background-color);
   background: #ffd6ac;
   padding: 1rem 5rem;
@@ -12,7 +12,7 @@
   position: absolute;
   transform: rotate(-45deg);
   z-index: 19;
-  bottom: 70px;
+  bottom: 65px;
   right: -96px;
   /*To display when sold out*/
   display: block;
