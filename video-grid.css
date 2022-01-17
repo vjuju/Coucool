@@ -323,7 +323,7 @@ iframe {
 
 @media screen and (max-width: 356px) {
   .explanations.black-background {
-    font-size: 19px;
+    font-size: 17px;
   }
 }
 
@@ -339,5 +339,12 @@ iframe {
     height: 40px;
     font-size: 16px;
     line-height: 43px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .sold-out {
+    font-size: 36px;
+    bottom: 65px;
   }
 }
