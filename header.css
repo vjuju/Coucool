@@ -17,6 +17,10 @@ header h1,
   font-weight: 200;
   line-height: 30px;
 }
+.header-desktop .dates a,
+.header-mobile a {
+  color: rgb(229, 203, 171);
+}
 .header-desktop .dates {
   display: flex;
   align-items: baseline;
@@ -88,7 +92,7 @@ header h1,
   }
   .header-desktop h1,
   .header-desktop .dates,
-  .header-mobile h2 {
+  .header-mobile a {
     font-size: 15px;
   }
   .header-desktop .dates {
@@ -119,9 +123,10 @@ header h1,
     font-size: 45px;
     line-height: unset;
   }
-  .header-mobile h2 {
+  .header-mobile a {
     padding-top: 10px;
     font-size: 23px !important;
+    display: block;
   }
 }
 
@@ -132,7 +137,7 @@ header h1,
   .header-mobile h1 {
     font-size: 36px;
   }
-  .header-mobile h2 {
+  .header-mobile a {
     font-size: 19px !important;
   }
 }

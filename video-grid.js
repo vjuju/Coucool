@@ -98,7 +98,7 @@ function showMessage(message_type) {
     document.querySelectorAll(".explanations")
   );
   if (message_type == "contributions") {
-    document.getElementById("haWidget1").style.display = "block";
+    document.getElementById("weezuniq580171").style.display = "block";
   }
   const message = document.getElementById(message_type);
   message.style.visibility = "visible";
