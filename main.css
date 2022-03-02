@@ -3,7 +3,7 @@
     --video-initial-height:1500;
     --video-initial-width:2900;
     --video-ratio:calc(var(--video-initial-width) / var(--video-initial-height) );
-    --main-color:rgb(243, 211, 171);
+    --main-color:#f3d3ab;
     --background-color:rgb(23,22,18);
     --background-color-transparent:rgba(23,22,18, 0.92);
     height: 100%;

@@ -16,7 +16,7 @@ $.i18n()
   .done(() => {
     $("body").i18n();
     displayContent(url.hash.substring(1));
-    setWeezeventSrc();
+    // setWeezeventSrc();
     initializeLanguages();
     backToHome();
     switchMenus();
@@ -25,13 +25,6 @@ $.i18n()
     initializeTitles();
   });
 
-const setWeezeventSrc = () => {
-  const locale = $.i18n().locale === "en" ? "en-GB" : "fr-FR";
-  const iframe = document.querySelector(".weezevent2021");
-  iframe.src = `https://widget.weezevent.com/ticket/E789415/?code=47299&locale=${locale}&width_auto=1&color_primary=00AEEF` +
-    iframe.dataset.key;
-    // `https://widget.weezevent.com/ticket/E811570/?code=12629&locale=${locale}&width_auto=1&color_primary=00AEEF`
-};
 
 
 const initializeLanguages = () => {
