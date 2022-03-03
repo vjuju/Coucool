@@ -7,12 +7,12 @@
   "menu-subline": "<strong>Coucool</strong> <br>est un rassemblement <br>artistique et participatif <br>mis en fête par Éros Sélavy",
   "menu-cta-contact": "Lui écrire",
   "home-subline": "<span class='coucool' >COUCOOL </span> est un rassemblement artistique et participatif mis en fête par Éros Selavy",
-  "home-dates-desktop": "7 Mai 2022",
-  "home-dates-mobile": "7 Mai 2022",
+  "home-dates-desktop": "29, 30 & 31 Juillet 2022",
+  "home-dates-mobile": "29, 30 & 31 Juillet 2022",
   "loader-text": "Patience",
   "home-instructions": "Pour célébrer <br>il faut savoir saisir l'instant",
   "popup-congrats-title": "FÉLICITATIONS!",
-  "popup-congrats-subline": "Tu vas maintenant pouvoir accéder à Coucool.",
+  "popup-congrats-subline": "Tu vas maintenant pouvoir accéder au Cirque d'Éros.",
   "popup-congrats-cta": "Je contribue",
   "popup-congrats-reminder": "Tu veux en savoir plus sur Coucool avant de payer ta contribution ? <br>Alors <a href='#engage.e' class='switch-menu'> viens par ici.</a>",
   "popup-failure-title": "MAUVAIS TEMPO!",
@@ -86,5 +86,5 @@
   "menu-nostalgy-subline-author": "Inconnu.e",
   "menu-nostalgy-website": "<i class='fas fa-globe'></i>Site Internet",
   "menu-nostalgy-activity": "<i class='fas fa-file-pdf'></i>Bilan d'activité",
-  "join": "ADHÉRER"
+  "join": "CIRQUE D'ÉROS"
 }

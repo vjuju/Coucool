@@ -47,9 +47,9 @@ function setImg(time) {
     if (congrats_images_numbers.includes(img_nb)) {
       img.onclick = onCongratsImageClick;
     } else if (almost_images_numbers.includes(img_nb)) {
-      img.onclick = onAlmostImageClick;
+      img.onclick = onCongratsImageClick;
     } else {
-      img.onclick = onFailImageClick;
+      img.onclick = onCongratsImageClick;
     }
     i++;
   });

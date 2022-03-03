@@ -7,12 +7,12 @@
   "menu-subline": "<strong>Coucool</strong> <br>is an artistic and <br>benevolent celebration, <br>hosted by Éros Sélavy",
   "menu-cta-contact": "Write to him",
   "home-subline": "<span class='coucool' >COUCOOL </span> is an artistic and benevolent celebration, hosted by Éros Sélavy",
-  "home-dates-desktop": "May 7th 2022",
-  "home-dates-mobile": "May 7th 2022",
+  "home-dates-desktop": "July 29, 30 & 31, 2022",
+  "home-dates-mobile": "July 29, 30 & 31, 2022",
   "loader-text": "Loading",
   "home-instructions": "To celebrate,<br> you have to seize the moment",
   "popup-congrats-title": "CONGRATULATIONS!",
-  "popup-congrats-subline": "You will now be able to access Coucool.",
+  "popup-congrats-subline": "You will now be able to access to Eros Circus.",
   "popup-congrats-cta": "I contribute",
   "popup-congrats-reminder": "Want to know more about Coucool before you pay your contribution ? <br><a href='#engage.e' class='switch-menu'>Come over here</a>",
   "popup-failure-title": "WRONG TEMPO!",
@@ -86,5 +86,5 @@
   "menu-nostalgy-subline-author": "Frank Sinatra",
   "menu-nostalgy-website": "<i class='fas fa-globe'></i>Website",
   "menu-nostalgy-activity": "<i class='fas fa-file-pdf'></i>Activity report",
-  "join": "JOIN"
+  "join": "ÉROS CIRCUS"
 }
