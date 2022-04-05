@@ -115,7 +115,7 @@ function getRandomInt(max) {
 
 function getRandomFailImage() {
   let randomNumber = getRandomInt(13).toString();
-  return `https://cou.cool/fail_images/${randomNumber}.jpg`;
+  return `https://cou.cool/2021/fail_images/${randomNumber}.jpg`;
 }
 
 function pauseVideo(playOrPause, explanations) {
